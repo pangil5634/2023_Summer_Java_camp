@@ -174,6 +174,69 @@ File transfer time is 13
 
 ------------------------------------------------------------------------------------------------
 
+# B08 - 다양한 조건 판정
 
+3개의 정수를 입력받아 이 숫자들에 대해서 다음 조건 중에 만족시키는 번호들을 모두 출력하라. 
+
+1번. 3개의 숫자 중 적어도 두 수의 값이 같다. 
+
+2번. 3개의 숫자 중 적어도 두 수의 크기가 모두 50 보다 크다. 
+
+3번. 3개의 숫자 중 어떤 두 수의 합이 나머지 하나의 숫자와 같다. 
+
+4번. 3개의 숫자 중 어떤 하나의 수로 다른 두 수를 나누면 나누어떨어지는 경우가 있다. 변수는 다음과 같이 사용하라. 
+
+int num1, num2, num3; // 첫 번째 숫자, 두 번째 숫자, 세 번째 숫자
+
+
+실행 예시
+```
+Enter first number 10
+Enter second number 20
+Enter third number 30
+Satisfies the third condition
+Satisfies the fourth condition
+```
+
+```
+Enter first number 50
+Enter second number 100
+Enter third number 200
+Satisfies the second condition
+Satisfies the fourth condition
+```
+
+```
+Enter first number 10
+Enter second number 10
+Enter third number 20
+Satisfies the first condition
+Satisfies the third condition
+Satisfies the fourth condition
+```
+
+------------------------------------------------------------------------------------------------
+
+# B09 - 비만 판정
+
+신장(cm단위)과 체중(kg단위)를 입력받은 후, 비만 여부를 판정하여 출력하라. 단, 비만여부는 다음 비만도 수치가 25이상인 경우에 "비만"으로 판단한다. 비만도 수치 = 체중(kg) / (신장(m)의 제곱) 으로 계산한다. 이 때, 신장은 미터 단위로 환산해야 함을 유 의하라. 변수는 다음과 같이 사용하라. 
+
+int height, weight; // 신장(cm), 체중(kg) 
+
+int bmi; // 비만도 수치 
+
+
+실행 예시
+```
+Enter height(cm) 165
+Enter weight(kg) 70
+You are obesity
+```
+
+```
+Enter height(cm) 185
+Enter weight(kg) 70
+You are not obesity
+```
 
 ------------------------------------------------------------------------------------------------

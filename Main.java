@@ -3,34 +3,28 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepB = new Main();
-        stepB.b07();
+        stepB.b09();
     }
 
-    void b07() {
-        int megabytes; // 용량(메가바이트 단위)
-        long bytes; // 용량(바이트 단위)
-        String usb2; // USB 2.0 사용여부 (Y: 예, N: 아니요)
-        int time = 0; // 전송시간(초 단위)
+    void b09() {
 
-        Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
+        int height, weight; // 신장(cm), 체중(kg)
+        int bmi = 0; // 비만도 수치
 
-        System.out.print("Enter file size as megabytes > "); // 입력을 위한 출력 구문
-        megabytes = sc.nextInt(); // megabytes 변수에 사용자로부터 값 입력 받기
+        Scanner sc = new Scanner(System.in); // 스캐너 사용 선언;
+        System.out.print("Enter height(cm) "); // 입력을 위한 출력 구문
+        height = sc.nextInt(); // height 변수에 사용자로부터 값 입력 받기
+        System.out.print("Enter weight(kg) "); // 입력을 위한 출력 구문
+        weight = sc.nextInt(); // weight 변수에 사용자로부터 값 입력 받기
 
-        bytes = megabytes * 1024 * 1024; // 값 계산
+        bmi = weight / (height * height / 10000); // 값 계산
 
-        System.out.print("Enter 'Y' if USB type is 2.0 or 'N' > "); // 입력을 위한 출력 구문
-        usb2 = sc.next(); // usb2 변수에 사용자로부터 값 입력 받기
-
-        if (usb2.equals("Y")) { // usb2값이 Y인지
-            time = (int) (bytes / 60000000); // 값 계산
-        } else if (usb2.equals("N")) { // usb2값이 N인지
-            time = (int) bytes / 1500000; // 값 계산
+        if (bmi >= 25) { // 비만인지
+            System.out.println("You are obesity"); // true
+        } else {
+            System.out.println("You are not obesity"); // false
         }
 
-        System.out.println("File transfer time is " + time); // 결과 출력 구문
-        sc.close(); // 스캐너 사용 해제
-
+        sc.close(); // 스캐너 사용 해제;
     }
-
 }
