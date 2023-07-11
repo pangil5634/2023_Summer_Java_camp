@@ -3,21 +3,26 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepA = new Main();
-        stepA.a02();
+        stepA.a03();
     }
 
-    void a02() {
-        double c_degree; // 섭씨 온도
-        double f_degree; // 화씨 온도
+    void a03() {
+        int width; // 가로크기
+        int height; // 세로크기
+        int area; // 직사각형의 넓이
+
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
-        System.out.print("Enter Celsius temperature > "); // 입력을 위한 출력 구문
-        c_degree = sc.nextDouble(); // c_degree 변수에 사용자로부터 값 입력 받기
+        System.out.print("Enter width of Rectangle > "); // 입력을 위한 출력 구문
+        width = sc.nextInt(); // width 변수에 사용자로부터 값 입력 받기
+        System.out.print("Enter height of Rectangle > "); // 입력을 위한 출력 구문
+        height = sc.nextInt(); // height 변수에 사용자로부터 값 입력 받기
 
-        f_degree = (c_degree * 1.8) + 32; // 온도 변환
+        area = width * height; // 값 계산
 
-        System.out.println("Fahrenheit temperature is " + f_degree); // 결과 출력 구문
+        System.out.println("Area of Rectangle is " + area); // 결과 출력 구문
 
         sc.close(); // 스캐너 사용 해제
+
     }
 }

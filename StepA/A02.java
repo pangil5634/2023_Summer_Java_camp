@@ -2,9 +2,9 @@ package StepA;
 
 import java.util.Scanner;
 
-class Main {
+class A02 {
     public static void main(String[] args) {
-        Main stepA = new Main();
+        A02 stepA = new A02();
         stepA.a02();
     }
 
