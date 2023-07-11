@@ -3,33 +3,38 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepC = new Main();
-        stepC.c09();
+        stepC.c10();
     }
 
-    void c09() {
-        int income; // 연봉 (원 단위)
-        int tax = 0; // 소득세 (원 단위)
+    void c10() {
+        int num1, num2; // 첫 번째 숫자, 두 번째 숫자
+
+        String operator; // 연산기호문자('+', '-', '*', '/' 중 1개)
+
+        int result = 0; // 연산 결과
 
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
-        System.out.print("Enter your income > "); // 입력을 위한 출력 구문
-        income = sc.nextInt(); // income 변수에 사용자로부터 값 입력 받기
+        System.out.print("Enter number1 > "); // 입력을 위한 출력 구문
+        num1 = sc.nextInt(); // num1 변수에 사용자로부터 값 입력 받기
+        System.out.print("Enter number2 > "); // 입력을 위한 출력 구문
+        num2 = sc.nextInt(); // num2 변수에 사용자로부터 값 입력 받기
 
-        if (income > 0) { // 연봉이 0원 초과인지
-            if (income < 10000000) { // 천만원 미만
-                tax = income / 1000 * 95;
-            } else if (income < 40000000) { // 4천만원 미만
-                tax = income / 10 * 19;
-            } else if (income < 80000000) { // 8천만원 미만
-                tax = income / 100 * 28;
-            } else if (income > 80000000) { // 8천만원 이상
-                tax = income / 100 * 37;
-            }
-            System.out.printf("Income tax on salary is %d\n", tax); // 결과 출력 구문
-        } else {
-            System.out.println("Wrong Input"); // 연봉이 0원 초과가 아닌 경우
+        System.out.print("Enter a math symbol('+', '-', '*', '/') "); // 입력을 위한 출력 구문
+        operator = sc.next(); // operator 변수에 사용자로부터 값 입력 받기
+
+        // operator에 따른 result 값 계산
+        if (operator.equals("+")) {
+            result = num1 + num2;
+        } else if (operator.equals("-")) {
+            result = num1 - num2;
+        } else if (operator.equals("*")) {
+            result = num1 * num2;
+        } else if (operator.equals("/")) {
+            result = num1 / num2;
         }
 
+        System.out.printf("Result is %d\n", result); // 결과 출력 구문
         sc.close(); // 스캐너 사용 해제
     }
 }
