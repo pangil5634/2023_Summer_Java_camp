@@ -97,7 +97,7 @@ public class B08 {
             if (num3 % num2 == 0) {// num2로 num3를 나눌 수 있으면
                 result = true;
             }
-        } else if (num1 % num3 == 0) {// num3로 num1를 나눌 수 있으면
+        } else if (num1 % num3 == 0) {// num3로 num1를 나눌 수 있으면ㅈ
             if (num2 % num3 == 0) {// num3로 num2를 나눌 수 있으면
                 result = true;
             }
