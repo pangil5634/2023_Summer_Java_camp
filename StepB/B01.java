@@ -19,15 +19,15 @@ public class B01 {
 
         age = 2023 - birth_year + 1; // 나이 계산
 
-        ageResult(age);
+        ageResult(age); // ageResult 함수 호출
 
         sc.close(); // 스캐너 사용 해제
     }
 
-    void ageResult(int age) {
-        if (age < 20)
-            System.out.println("You are not adult");
-        else if (age >= 20)
+    void ageResult(int age) { // 미성년자 판정 함수
+        if (age < 20) // age가 20 미만인지 판단
+            System.out.println("You are not adult"); // true
+        else if (age >= 20) // age가 20 이상인지 판단
             System.out.println("You are adult");
     }
 

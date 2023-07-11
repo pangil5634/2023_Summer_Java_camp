@@ -1,8 +1,10 @@
+package StepB;
+
 import java.util.Scanner;
 
-class Main {
+public class B03 {
     public static void main(String[] args) {
-        Main stepB = new Main();
+        B03 stepB = new B03();
         stepB.b03();
     }
 
