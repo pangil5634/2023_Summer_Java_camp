@@ -22,7 +22,7 @@ public class B03 {
 
         area = width * height; // 값 계산
 
-        System.out.println("\nArea of Rectangle is " + area + " and"); // 결과 출력 구문
+        System.out.println("Area of Rectangle is " + area + " and"); // 결과 출력 구문
         checkRectangle(width, height); // 정사각형 판정 함수 호출
 
         sc.close(); // 스캐너 사용 해제
