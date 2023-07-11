@@ -223,6 +223,57 @@ This date is not valid.
 
 ------------------------------------------------------------------------------------------------
 
+# C06 - 점수 계산
+
+국어, 영어, 수학 점수를 입력받아 이 점수의 총점과 평균을 계산하고, 평균에 따라 등급을 정하여 출력하라. 
+단, 총점 = 국어점수 + 영어점수 + 수학점수, 
+
+평균 = 총점 / 3.0 으로 계산하고 등급은 다음과 같은 기준 으로 결정하라. 
+
+```
+평균 90이상 : A
+평균 80이상 ~ 90미만 : B
+평균 70이상 ~ 80미만 : C 
+평균 60이상 ~ 70미만 : D 
+평균 60미만 : F
+```
+
+변수는 다음과 같이 사용하라. 
+
+int kor, eng, math; // 국어점수, 영어점수, 수학점수 
+
+int total; // 총점 
+
+double average; // 평균점수 
+
+실행 예)
+
+```
+Enter points of Korean > 85
+Enter points of English > 77
+Enter points of Math > 94
+Total point is 256
+The average is 85.3
+Your grade is B
+```
+
+```
+Enter points of Korean > 54
+Enter points of English > 66
+Enter points of Math > 60
+Total point is 180
+The average is 60.0
+Your grade is D
+```
+
+```
+Enter points of Korean > 99
+Enter points of English > 88
+Enter points of Math > 95
+Total point is 282
+The average is 94.0
+Your grade is A
+```
 
 ------------------------------------------------------------------------------------------------
 
