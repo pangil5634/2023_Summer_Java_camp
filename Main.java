@@ -1,36 +1,36 @@
 import java.util.Scanner;
 
 class Main {
-    Scanner s = new Scanner(System.in);
-
     public static void main(String[] args) {
         Main stepB = new Main();
-        stepB.b05();
+        stepB.b07();
     }
 
-    void b05() {
+    void b07() {
+        int megabytes; // 용량(메가바이트 단위)
+        long bytes; // 용량(바이트 단위)
+        String usb2; // USB 2.0 사용여부 (Y: 예, N: 아니요)
+        int time = 0; // 전송시간(초 단위)
 
-        int days; // 날 수
-        int seconds; // 초 단위 시간
-        int m_count;
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
-        System.out.print("Enter number of days > "); // 입력을 위한 출력 구문
-        days = sc.nextInt(); // days 변수에 사용자로부터 값 입력 받기
+        System.out.print("Enter file size as megabytes > "); // 입력을 위한 출력 구문
+        megabytes = sc.nextInt(); // megabytes 변수에 사용자로부터 값 입력 받기
 
-        seconds = days * 24 * 60 * 60;// 값 계산
-        m_count = seconds / 1000000; // 100만 초 포함 횟수 계산
+        bytes = megabytes * 1024 * 1024; // 값 계산
 
-        System.out.println("Total seconds is " + seconds); // 결과 출력 구문
+        System.out.print("Enter 'Y' if USB type is 2.0 or 'N' > "); // 입력을 위한 출력 구문
+        usb2 = sc.next(); // usb2 변수에 사용자로부터 값 입력 받기
 
-        checkMillion(m_count); // 100만 초 넘는 경우 출력 함수 호출
+        if (usb2.equals("Y")) { // usb2값이 Y인지
+            time = (int) (bytes / 60000000); // 값 계산
+        } else if (usb2.equals("N")) { // usb2값이 N인지
+            time = (int) bytes / 1500000; // 값 계산
+        }
+
+        System.out.println("File transfer time is " + time); // 결과 출력 구문
         sc.close(); // 스캐너 사용 해제
 
     }
 
-    void checkMillion(int m_count) {
-        if (m_count != 0) { // 100만 초 넘는 경우가 존재하는 경우
-            System.out.printf("It includes million seconds %d times\n", m_count); // true
-        }
-    }
 }
