@@ -1,8 +1,10 @@
+package StepA;
+
 import java.util.Scanner;
 
-class Main {
+class A07 {
     public static void main(String[] args) {
-        Main stepA = new Main();
+        A07 stepA = new A07();
         stepA.a07();
     }
 
@@ -28,6 +30,5 @@ class Main {
         System.out.println(bytes + " B"); // 결과 출력 구문
 
         sc.close(); // 스캐너 사용 해제
-
     }
 }
