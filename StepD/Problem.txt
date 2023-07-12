@@ -83,7 +83,32 @@ The sum of 10 numbers is 421, average is 42.1
 
 ------------------------------------------------------------------------------------------------
 
+# D04 - 미성년자 숫자세기
 
+가족이 몇 명인지 입력받은 후, 그 인원 수 만큼 태어난 년도를 입력받으면서, 나이를 계산하여 미성년자가 모두 몇 명인지 출력하라. 단, 나이 = 2021 – 태어난 년도 + 1 로 계산하고 나이가 20세 미만인 경우, 미성년자로 판정한다. 
+
+반복은 for 구문을 사용하고, 변수는 다음과 같이 사용하라. 
+
+int count_all; // 가족 인원수 
+
+int count_young; // 미성년자의 수 
+
+int birth_year; // 태어난 년도 
+
+int age; // 나이 
+
+int i; // 반복문을 위한 변수 
+
+실행 예시
+```
+Enter number of family members > 5
+Enter a birth year > 1955
+Enter a birth year > 1960
+Enter a birth year > 1975
+Enter a birth year > 1990
+Enter a birth year > 2004
+There are 1 youngs in the family.
+```
 
 ------------------------------------------------------------------------------------------------
 

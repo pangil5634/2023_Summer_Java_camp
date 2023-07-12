@@ -3,32 +3,33 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepD = new Main();
-        stepD.d03();
+        stepD.d04();
     }
 
-    void d03() {
-        int number; // 입력받은 수
-        int count = 0; // 입력받은 숫자의 개수
-        int totalsum = 0; // 총합계
-        double average = 0.0; // 평균 값
+    void d04() {
+
+        int count_all = 0; // 가족 인원수
+        int count_young = 0; // 미성년자의 수
+        int birth_year = 0; // 태어난 년도
+        int age = 0; // 나이
+        int i = 0; // 반복문을 위한 변수
 
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
-        while (true) { // 반복문
-            System.out.print("Enter a number from 0 to 100 > "); // 입력을 위한 출력 구문
-            number = sc.nextInt(); // number 변수에 사용자로부터 값 입력 받기
+        System.out.print("Enter number of family members > "); // 입력을 위한 출력 구문
+        count_all = sc.nextInt(); // count_all 변수에 사용자로부터 값 입력 받기
 
-            if (0 <= number && number <= 100) { // 값이 0에서 100 사이의 숫자인 경우
-                count++; // 숫자 개수 증감
-                totalsum += number; // 합계에 입력받은 수 합산
-            } else {
-                break; // 값이 0에서 100 사이의 숫자가 아닌 경우
+        for (i = 0; i < count_all; i++) { // 가족 인원 수 만큼 반복
+            System.out.print("Enter a birth year > "); // 입력을 위한 출력 구문
+            birth_year = sc.nextInt(); // birth_year 변수에 사용자로부터 값 입력 받기
+            age = 2023 - birth_year + 1; // 나이 계산
+
+            if (age < 20) { // 20세 미만인지
+                count_young++; // 미성년자 수 증감
             }
         }
 
-        average = (double) totalsum / count; // 평균 값 계산
-
-        System.out.printf("The sum of %d numbers is %d, average is %.1f\n", count, totalsum, average); // 결과 출력 구문
+        System.out.printf("There are %d youngs in the family.\n", count_young); // 결과 출력 구문
 
         sc.close(); // 스캐너 사용 해제
     }
