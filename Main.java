@@ -3,36 +3,33 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepD = new Main();
-        stepD.d02();
+        stepD.d03();
     }
 
-    void d02() {
+    void d03() {
+        int number; // 입력받은 수
+        int count = 0; // 입력받은 숫자의 개수
+        int totalsum = 0; // 총합계
+        double average = 0.0; // 평균 값
 
-        int number = 0; // 입력받은 수
-
-        int max_num = 0, min_num = 100; // 가장 큰 숫자, 가장 작은 숫자
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
         while (true) { // 반복문
-            System.out.print("Enter a number > "); // 입력을 위한 출력 구문
+            System.out.print("Enter a number from 0 to 100 > "); // 입력을 위한 출력 구문
             number = sc.nextInt(); // number 변수에 사용자로부터 값 입력 받기
+
             if (0 <= number && number <= 100) { // 값이 0에서 100 사이의 숫자인 경우
-
-                if (number > max_num) { // number이 최대값보다 큰 경우
-                    max_num = number;
-                }
-
-                if (number < min_num) { // number이 최소값보다 작은 경우
-                    min_num = number;
-                }
-
+                count++; // 숫자 개수 증감
+                totalsum += number; // 합계에 입력받은 수 합산
             } else {
                 break; // 값이 0에서 100 사이의 숫자가 아닌 경우
             }
         }
 
-        System.out.printf("Max number is %d, Min number is %d\n", max_num, min_num); // 결과 출력 구문
+        average = (double) totalsum / count; // 평균 값 계산
+
+        System.out.printf("The sum of %d numbers is %d, average is %.1f\n", count, totalsum, average); // 결과 출력 구문
+
         sc.close(); // 스캐너 사용 해제
     }
-
 }

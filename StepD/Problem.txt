@@ -52,7 +52,34 @@ Max number is 99, Min number is 5
 
 ------------------------------------------------------------------------------------------------
 
+# D03- 입력 받은 숫자들의 총합계, 평균 구하기
+반복해서 0부터 100 사이의 숫자를 입력받아서 지금까지 입력된 숫자들이 모두 몇 개이며, 이 숫자들의 총 합계와 평균 값을 계산하여 출력하라. 0부터 100 사이의 숫자가 아닌 수가 입력되면 반복문이 중단되도록 하라. 
 
+반복은 while 구문을 사용하고, 변수는 다음과 같이 사용하라. 
+
+int number; // 입력받은 수 
+
+int count=0; // 입력받은 숫자의 개수 
+
+int totalsum; // 총합계 
+
+double average; // 평균 값 
+
+실행 예시
+```
+Enter a number from 0 to 100 > 10
+Enter a number from 0 to 100 > 50
+Enter a number from 0 to 100 > 64
+Enter a number from 0 to 100 > 2
+Enter a number from 0 to 100 > 13
+Enter a number from 0 to 100 > 97
+Enter a number from 0 to 100 > 88
+Enter a number from 0 to 100 > 12
+Enter a number from 0 to 100 > 35
+Enter a number from 0 to 100 > 50
+Enter a number from 0 to 100 > 999
+The sum of 10 numbers is 421, average is 42.1
+```
 
 ------------------------------------------------------------------------------------------------
 
