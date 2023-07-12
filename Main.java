@@ -3,34 +3,48 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepD = new Main();
-        stepD.d04();
+        stepD.d05();
     }
 
-    void d04() {
-
-        int count_all = 0; // 가족 인원수
-        int count_young = 0; // 미성년자의 수
-        int birth_year = 0; // 태어난 년도
-        int age = 0; // 나이
-        int i = 0; // 반복문을 위한 변수
+    void d05() {
+        int width = 1, height = 1; // 가로크기, 세로크기
+        int count1 = 0; // "정사각형"의 개수
+        int count2 = 0; // "좌우로 길쭉한 직사각형"의 개수
+        int count3 = 0; // "위아래로 길쭉한 직사각형"의 개수
+        int count4 = 0; // "일반적인 가로형 직사각형"의 개수
+        int count5 = 0; // "일반적인 세로형 직사각형"의 개수
 
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
-        System.out.print("Enter number of family members > "); // 입력을 위한 출력 구문
-        count_all = sc.nextInt(); // count_all 변수에 사용자로부터 값 입력 받기
-
-        for (i = 0; i < count_all; i++) { // 가족 인원 수 만큼 반복
-            System.out.print("Enter a birth year > "); // 입력을 위한 출력 구문
-            birth_year = sc.nextInt(); // birth_year 변수에 사용자로부터 값 입력 받기
-            age = 2023 - birth_year + 1; // 나이 계산
-
-            if (age < 20) { // 20세 미만인지
-                count_young++; // 미성년자 수 증감
+        while (true) {
+            System.out.print("Enter width, height of Rectangle > "); // 입력을 위한 출력 구문
+            width = sc.nextInt(); // width 변수에 사용자로부터 값 입력 받기
+            height = sc.nextInt(); // height 변수에 사용자로부터 값 입력 받기
+            if (width <= 0 || height <= 0) { // width 혹은 height 값이 이하일 경우
+                break;
+            } else {
+                if (width == height) { // "정사각형"의 개수
+                    count1++;
+                } else if (width >= height * 2) { // "좌우로 길쭉한 직사각형"의 개수
+                    count2++;
+                } else if (height >= width * 2) { // "위아래로 길쭉한 직사각형"의 개수
+                    count3++;
+                } else if (width > height) { // "일반적인 가로형 직사각형"의 개수
+                    count4++;
+                } else if (height > width) { // "일반적인 세로형 직사각형"의 개수
+                    count5++;
+                }
             }
         }
 
-        System.out.printf("There are %d youngs in the family.\n", count_young); // 결과 출력 구문
+        // 결과 출력 구문
+        System.out.println("Count of square is " + count1);
+        System.out.println("Count of an oblong rectangle from side to side is " + count2);
+        System.out.println("Count of an oblong rectangle from top to bottom is " + count3);
+        System.out.println("Count of a horizontal rectangle is " + count4);
+        System.out.println("Count of a vertical rectangle is " + count5);
 
         sc.close(); // 스캐너 사용 해제
+
     }
 }

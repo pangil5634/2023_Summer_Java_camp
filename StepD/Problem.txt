@@ -112,7 +112,55 @@ There are 1 youngs in the family.
 
 ------------------------------------------------------------------------------------------------
 
+# D05 - 직사각형 형태 개수 세기
 
+반복해서 직사각형의 가로크기와 세로크기를 입력받으면서 이 값을 이용하여 직사각형의 모양을 판정하여 각각의 종류별로 몇 개가 입력되었는지 결과를 출력하라. 가로 크기와 세로 크기 중 하나라도 0이하의 값이 입력되면 반복을 중단한다. 
+
+단, 평가 기준은 다음과 같다. 
+
+가로 크기와 세로크기가 동일 : "정사각형" 
+
+가로 크기가 세로크기의 2배 이상 : "좌우로 길쭉한 직사각형" 
+
+세로 크기가 가로크기의 2배 이상 : "위아래로 길쭉한 직사각형" 
+
+가로 크기가 세로크기보다 크면 : "일반적인 가로형 직사각형" 
+
+세로 크기가 가로크기보다 크면 : "일반적인 세로형 직사각형" 
+
+반복은 while 구문을 사용하고, 변수는 다음과 같이 사용하라. 
+
+int width, height; // 가로크기, 세로크기 
+
+int count1; // "정사각형"의 개수 
+
+int count2; // "좌우로 길쭉한 직사각형"의 개수 
+
+int count3; // "위아래로 길쭉한 직사각형"의 개수 
+
+int count4; // "일반적인 가로형 직사각형"의 개수 
+
+int count5; // "일반적인 세로형 직사각형"의 개수 
+
+실행 예시
+```
+Enter width, height of Rectangle > 10 10
+Enter width, height of Rectangle > 10 50
+Enter width, height of Rectangle > 20 100
+Enter width, height of Rectangle > 50 50
+Enter width, height of Rectangle > 40 30
+Enter width, height of Rectangle > 60 70
+Enter width, height of Rectangle > 70 80
+Enter width, height of Rectangle > 100 20
+Enter width, height of Rectangle > 200 50
+Enter width, height of Rectangle > 30 30
+Enter width, height of Rectangle > -1 -1
+Count of square is 3
+Count of an oblong rectangle from side to side is 2
+Count of an oblong rectangle from top to bottom is 2
+Count of a horizontal rectangle is 1
+Count of a vertical rectangle is 2
+```
 
 ------------------------------------------------------------------------------------------------
 
