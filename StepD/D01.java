@@ -13,6 +13,7 @@ public class D01 {
         int number; // 입력받은 수
         int totalsum = 0; // 1부터 더한 계산 결과 값
         int i = 1; // 반복문 사용을 위한 변수
+
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
         System.out.print("Enter a number > "); // 입력을 위한 출력 구문

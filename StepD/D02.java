@@ -1,9 +1,11 @@
+package StepD;
+
 import java.util.Scanner;
 
-class Main {
+public class D02 {
     public static void main(String[] args) {
-        Main stepD = new Main();
-        stepD.d02();
+        D02 stepB = new D02();
+        stepB.d02();
     }
 
     void d02() {
@@ -34,5 +36,4 @@ class Main {
         System.out.printf("Max number is %d, Min number is %d\n", max_num, min_num); // 결과 출력 구문
         sc.close(); // 스캐너 사용 해제
     }
-
 }
