@@ -164,6 +164,65 @@ Count of a vertical rectangle is 2
 
 ------------------------------------------------------------------------------------------------
 
+# D06 - 아파트 평형 계산 및 종류 판정
+
+아파트 10채의 분양 면적을 제곱미터(m2) 단위로 입력받아 이 값을 평형 단위의 값으로 변환하여 평형 수 에 따라 아파트의 종류를 구분하여 종류별로 개수를 센 후, 그 결과를 출력하라. 
+
+단, 평형 수 = 제곱미터 / 3.305 로 계산하고, 크기에 따른 아파트 종류는 다음과 같이 판정한다. 
+
+15평 미만 : 소형 
+
+15평 이상 ~ 30평 미만 : 중소형 
+
+30평 이상 ~ 50평 미만 : 중형 
+
+50평 이상 : 대형 
+
+반복문은 for 구문을 사용하고, 변수는 다음과 같이 사용하라. 
+
+double m2_area; // 면적 (제곱미터) 
+
+double pyung_area; // 면적 (평수) 
+
+int count1; // 소형 아파트 개수 
+
+int count2; // 중소형 아파트 개수 
+
+int count3; // 중형 아파트 개수 
+
+int count4; // 대형 아파트 개수 
+
+int i; // 반복문을 위한 변수 
+
+실행 예시
+
+```
+Enter area of Apartment(m^2) > 85.5
+Area of Apartment(pyung) 25.9
+Enter area of Apartment(m^2) > 120.4
+Area of Apartment(pyung) 36.4
+Enter area of Apartment(m^2) > 200.0
+Area of Apartment(pyung) 60.5
+Enter area of Apartment(m^2) > 40.5
+Area of Apartment(pyung) 12.3
+Enter area of Apartment(m^2) > 55
+Area of Apartment(pyung) 16.6
+Enter area of Apartment(m^2) > 155
+Area of Apartment(pyung) 46.9
+Enter area of Apartment(m^2) > 77.7
+Area of Apartment(pyung) 23.5
+Enter area of Apartment(m^2) > 99.9
+Area of Apartment(pyung) 30.2
+Enter area of Apartment(m^2) > 65.0
+Area of Apartment(pyung) 19.7
+Enter area of Apartment(m^2) > 250.1
+Area of Apartment(pyung) 75.7
+Count of small-sized apartment is 1
+Count of small and medium-sized apartment is 4
+Count of medium-sized apartment is 3
+Count of big-sized apartment is 2
+```
+
 
 
 ------------------------------------------------------------------------------------------------
