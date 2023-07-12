@@ -3,46 +3,31 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepD = new Main();
-        stepD.d06();
+        stepD.d07();
     }
 
-    void d06() {
+    void d07() {
 
-        double m2_area = 0; // 면적 (제곱미터)
-        double pyung_area = 0; // 면적 (평수)
-        int count1 = 0; // 소형 아파트 개수
-        int count2 = 0; // 중소형 아파트 개수
-        int count3 = 0; // 중형 아파트 개수
-        int count4 = 0; // 대형 아파트 개수
-        int i = 0; // 반복문을 위한 변수
+        int a, b; // 1차 함수의 계수 a, b
+        int x_begin, x_end; // x좌표의 시작 값과 끝 값
+        int x = 0, y = 0; // x좌표, y좌표
 
         Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
-        for (i = 1; i <= 10; i++) {
-            System.out.print("Enter area of Apartment(m^2) > "); // 입력을 위한 출력 구문
-            m2_area = sc.nextDouble(); // m2_area 변수에 사용자로부터 값 입력 받기
-            pyung_area = m2_area / 3.305; // 면적(평수) 계산
+        System.out.print("Enter the coefficients a and b of linear function(y=ax+b) > "); // 입력을 위한 출력 구문
+        a = sc.nextInt(); // a 변수에 사용자로부터 값 입력 받기
+        b = sc.nextInt();// b 변수에 사용자로부터 값 입력 받기
 
-            System.out.printf("Area of Apartment(pyung) %.1f\n", pyung_area); // 결과 출력 구문
+        System.out.print("Enter the start and end values of x coordinates > ");// 입력을 위한 출력 구문
+        x_begin = sc.nextInt();// x_begin 변수에 사용자로부터 값 입력 받기
+        x_end = sc.nextInt();// x_end 변수에 사용자로부터 값 입력 받기
 
-            if (pyung_area < 15) { // 소형 아파트인지
-                count1++;
-            } else if (pyung_area < 30) { // 중소형 아파트인지
-                count2++;
-            } else if (pyung_area < 50) { // 중형 아파트인지
-                count3++;
-            } else { // 대형 아파트인지
-                count4++;
-            }
+        for (int i = x_begin; i <= x_end; i++) { // x_begin부터 x_end 사이의 x 값에 대한 1차 함수 (x, y) 좌표 출력 반복
+            x = i; // x의 위치는 x_begin 값
+            y = a * x + b; // y의 값은 함수 계산 값
+            System.out.printf("coordinates (%d, %d)\n", x, y); // 결과 출력 구문
         }
 
-        // 결과 출력 구문
-        System.out.println("Count of small-sized apartment is " + count1);
-        System.out.println("Count of small and medium-sized apartment is " + count2);
-        System.out.println("Count of medium-sized apartment is " + count3);
-        System.out.println("Count of big-sized apartment is " + count4);
-
         sc.close(); // 스캐너 사용 해제
-
     }
 }

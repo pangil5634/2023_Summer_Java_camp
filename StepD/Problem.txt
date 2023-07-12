@@ -227,7 +227,33 @@ Count of big-sized apartment is 2
 
 ------------------------------------------------------------------------------------------------
 
+# D07 - 1차 함수의 좌표 구하기
 
+1차 함수 y=ax + b 에 대해 계수 a와 b를 입력받은 후, x값의 시작 값과 마지막 값을 입력받아 이 두 수 사이의 x 값에 대한 1차 함수의 (x, y) 좌표들을 출력하라. 
+
+반복문은 for 구문을 사용하고, 변수는 다음과 같이 사용하라. 
+
+int a, b; // 1차 함수의 계수 a, b 
+
+int x_begin, x_end; // x좌표의 시작 값과 끝 값 
+
+int x, y; // x좌표, y좌표 
+
+실행 예시
+```
+Enter the coefficients a and b of linear function(y=ax+b) > 2 5
+Enter the start and end values of x coordinates > 1 10
+coordinates (1, 7)
+coordinates (2, 9)
+coordinates (3, 11)
+coordinates (4, 13)
+coordinates (5, 15)
+coordinates (6, 17)
+coordinates (7, 19)
+coordinates (8, 21)
+coordinates (9, 23)
+coordinates (10, 25)
+```
 
 ------------------------------------------------------------------------------------------------
 
