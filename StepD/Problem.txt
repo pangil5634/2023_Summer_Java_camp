@@ -257,7 +257,33 @@ coordinates (10, 25)
 
 ------------------------------------------------------------------------------------------------
 
+# D08 - 2차 함수의 좌표 구하기
 
+2차 함수 y=ax2 + bx + c 에 대해 계수 a와 b와 c를 입력받은 후, x값의 시작 값과 마지막 값을 입력 받아 이 두 수 사이의 x값에 대한 2차 함수의 (x, y) 좌표들을 출력하라. 
+
+반복문은 for 구문을 사용하고, 변수는 다음과 같이 사용하라. 
+
+int a, b, c; // 2차 함수의 계수 a, b, c 
+
+int x_begin, x_end; // x좌표의 시작 값과 끝 값 
+
+int x, y; // x좌표, y좌표 
+
+실행 예시
+```
+Enter the coefficients a and b of quadratic function(y=ax^2+bx+c) > 1 4 4
+Enter the start and end values of x coordinates > 1 10
+coordinates (1, 9)
+coordinates (2, 16)
+coordinates (3, 25)
+coordinates (4, 36)
+coordinates (5, 49)
+coordinates (6, 64)
+coordinates (7, 81)
+coordinates (8, 100)
+coordinates (9, 121)
+coordinates (10, 144)
+```
 
 ------------------------------------------------------------------------------------------------
 
