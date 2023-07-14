@@ -24,7 +24,6 @@ public class P1330 {
             System.out.println("<");
         else if (A == B)
             System.out.println("==");
-
         sc.close();
     }
 }
