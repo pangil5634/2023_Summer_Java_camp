@@ -1,9 +1,11 @@
+package StepE;
+
 import java.util.Scanner;
 
-class Main {
+public class E06 {
     public static void main(String[] args) {
-        Main stepE = new Main();
-        stepE.e06();
+        E06 main = new E06();
+        main.e06();
     }
 
     void e06() {
@@ -21,9 +23,6 @@ class Main {
         for (i = 1; i <= columns; i++) {
             for (j = 1; j <= rows; j++) {
                 number = i * j;
-                // if (number == 1) { //
-                // System.out.printf("%3d", number); //
-                // } else //
                 System.out.printf("%4d", number);
                 number++;
             }
