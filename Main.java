@@ -3,29 +3,48 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Main stepE = new Main();
-        stepE.e03();
+        stepE.e04();
     }
 
-    void e03() {
-        int height; // 입력받은 높이
-        int i, j; // 반복문 사용을 위한 변수
+    void e04() {
+        int mode = 0; // 출력모드(1: 홀수단, 2: 짝수단)
+        int i, j = 0; // 반복문 사용을 위한 변수
+
         Scanner sc = new Scanner(System.in);
 
-        // 높이 입력 받기
-        System.out.print("Enter a height of triangle > ");
-        height = sc.nextInt();
+        // 출력모드 입력 받기
+        System.out.print("Enter a type of gugudan (1: odd, 2: even) > ");
+        mode = sc.nextInt();
 
-        // 결과 출력하기
-        for (i = 1; i <= 20; i++) {
-            for (j = 20 - i; j >= 1; j--) {
-                System.out.print(" ");
+        // 결과 출력
+        if (mode == 1) {
+            for (i = 3; i <= 9; i += 2) {
+                for (j = 1; j <= 9; j++) {
+
+                    if (j % 3 == 0)
+                        System.out.printf("%d X %d = %d\n", i, j, i * j);
+                    else {
+                        System.out.printf("%d X %d = %d\t", i, j, i * j);
+                    }
+                }
+                if (i != 9)
+                    System.out.printf("\n");
             }
-            for (j = 0; j < i * 2 - 1; j++)
-                System.out.print("*");
+        } else if (mode == 2) {
+            for (i = 2; i <= 8; i += 2) {
+                for (j = 1; j <= 9; j++) {
 
-            System.out.print("\n");
+                    if (j % 3 == 0)
+                        System.out.printf("%d X %d = %d\n", i, j, i * j);
+                    else {
+                        System.out.printf("%d X %d = %d\t", i, j, i * j);
+                    }
+                }
+                if (i != 8)
+                    System.out.printf("\n");
+            }
         }
         sc.close();
-    }
 
+    }
 }
