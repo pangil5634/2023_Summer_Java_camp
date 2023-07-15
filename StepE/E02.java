@@ -1,9 +1,11 @@
+package StepE;
+
 import java.util.Scanner;
 
-class Main {
+public class E02 {
     public static void main(String[] args) {
-        Main stepE = new Main();
-        stepE.e02();
+        E02 main = new E02();
+        main.e02();
     }
 
     void e02() {
