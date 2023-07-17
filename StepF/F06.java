@@ -9,36 +9,26 @@ class F06 {
     }
 
     void f06() {
-        int height = 0, weight = 0; // 입력받은 신장(cm), 체중(kg)
-        float bmi = 0; // 계산된 비만도 수치
-        float bmilist[][] = new float[10][3]; // 10명에 대한 신장, 체중, 비만도수치를 담고 있는 리스트
-        int count = 0; // 비만인 사람의 숫자
-        int i; // 반복문을 위한 변수
+
+        int number[][] = new int[5][3]; // 각 집의 거주자 수, 층별, 호수별 중복 리스트
+        int newnum = 0; // 입력받은 숫자
+        int total = 0; // 아파트의 총 거주자 수
+        int ho; // 아파트 호를 나타내는 변수
+        int i, j; // 반복문 사용을 위한 변수
 
         Scanner sc = new Scanner(System.in);
 
-        // 10명의 신장, 체중 입력 받기
-        for (i = 0; i < 10; i++) {
-            System.out.print("Enter height(cm) and weight(kg) ");
-            height = sc.nextInt();
-            weight = sc.nextInt();
-
-            bmi = ((float) weight / (height * height)) * 100 * 100;
-            bmilist[i][0] = height;
-            bmilist[i][1] = weight;
-            bmilist[i][2] = bmi;
-
-        }
-
-        // 비만 판단하기
-        for (i = 0; i < 10; i++) {
-            if (bmilist[i][2] >= 25) {
-                count++;
-                System.out.printf("%dth person is obesity\n", i + 1);
+        // 사용자로부터 입력 받기
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 3; j++) {
+                System.out.print("Enter number of people in room " + (i + 1) + "0" + (j + 1) + " > ");
+                newnum = sc.nextInt();
+                number[i][j] = newnum;
+                total += newnum;
             }
-
         }
+
         // 결과 출력하기
-        System.out.println(count + " people is obesity");
+        System.out.println("Number of people living in this apartment is " + total);
     }
 }
