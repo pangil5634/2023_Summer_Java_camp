@@ -9,30 +9,41 @@ class F03 {
     }
 
     void f03() {
-
-        double score[] = new double[10]; // 심사점수 리스트
-        float maxscore, minscore; // 가장 큰 점수, 가장 작은 점수
-        float total = 0; // 점수 총 합계
-        float average = 0; // 평균점수
-        float newnum = 0; // 숫자 입력을 위한 변수
-        int i; // 반복문을 위한 변수
+        int jumsu[][] = new int[5][3]; // 5명의 3과목 점수를 저장하고 있는 중복 리스트
+        int sum[] = new int[3]; // 3과목 총점 리스트
+        double average[] = new double[3]; // 3과목 평균 리스트
+        int kor, eng, mat; // 3과목 점수 입력을 위한 변수
+        int i, j; // 반복문을 위한 변수
 
         Scanner sc = new Scanner(System.in);
 
-        // 10개의 숫자 입력 받기
-        for (i = 0; i < 10; i++) {
-            System.out.printf("Enter %dth score > ", i + 1);
-            newnum = sc.nextFloat();
-            score[i] = newnum;
-            total += newnum;
+        // 값 입력 받아서 저장하기
+        for (i = 0; i < 5; i++) {
+            System.out.printf("Enter Korean, English, Math score of %dth student > ", i + 1);
+            kor = sc.nextInt();
+            eng = sc.nextInt();
+            mat = sc.nextInt();
+
+            jumsu[i][0] = kor;
+            jumsu[i][1] = eng;
+            jumsu[i][2] = mat;
+
+            sum[0] += kor;
+            sum[1] += eng;
+            sum[2] += mat;
         }
 
         // 평균 계산
-        average = (float) total / 10;
+        for (i = 0; i < 3; i++) {
+            average[i] = (double) sum[i] / 5;
+        }
 
         // 결과 출력
-        System.out.printf("Average is %.1f\n", average);
+        System.out.printf("Total Korean score is %d, average is %.1f\n", sum[0], average[0]);
+        System.out.printf("Total English score is %d, average is %.1f\n", sum[1], average[1]);
+        System.out.printf("Total Math score is %d, average is %.1f\n", sum[2], average[2]);
 
         sc.close();
+
     }
 }

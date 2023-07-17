@@ -90,6 +90,35 @@ Total Math score is 416, average is 83.2
 
 ------------------------------------------------------------------------------------------------
 
+# F04 -  5명의 국, 영, 수 3과목 점수의 학생별 총점, 평균값 구하기
+학생 5명의 국어, 영어, 수학 점수를 각각 입력받아 저장한 후에, 각 과목별 총점과 평균 점수를 계산하여 출력하라. 변수는 다음과 같이 사용하라. 
+
+int jumsu[][] = new int[5][3]; // 5명의 3과목 점수를 저장하고 있는 중복 리스트 
+
+int sum[] = new int[5]; // 각 학생의 총점 리스트 
+
+double average[] = new double[5]; // 각 학생의 평균 리스트 
+
+int kor, eng, mat; // 3과목 점수 입력을 위한 변수 
+
+int i, j; // 반복문을 위한 변수 
+
+실행 예시
+```
+Enter Korean, English, Math score of 1th student > 95 85 75
+Enter Korean, English, Math score of 2th student > 87 79 88
+Enter Korean, English, Math score of 3th student > 95 85 75
+Enter Korean, English, Math score of 4th student > 65 77 79
+Enter Korean, English, Math score of 5th student > 77 88 99
+Total score of 1th student is 255, average is 85.0
+Total score of 2th student is 254, average is 84.7
+Total score of 3th student is 255, average is 85.0
+Total score of 4th student is 221, average is 73.7
+Total score of 5th student is 264, average is 88.0
+```
+
+------------------------------------------------------------------------------------------------
+
 # F05 -  비만판정
 10명의 신장(cm단위)과 체중(kg단위)를 입력받은 후, 이들 중 몇 번째 사람들이 비만인지를 판정하여 출 력하라. 그리고 도합 몇 명이 비만인지 출력하라. 단, 비만여부는 다음 비만도 수치가 25이상인 경우에 "비만"으로 판단한다. 비만도 수치 = 체중(kg) / (신장(m)의 제곱) 으로 계산한다. 이 때, 신장은 미터 단위로 환산해야 함을 유 의하라. 
 
@@ -162,7 +191,54 @@ Number of people living in this apartment is 58
 
 ------------------------------------------------------------------------------------------------
 
+# F07 -  5층 아파트의 층별, 호수별 거주자 숫자 구하기
+한 층에 3집(1호, 2호, 3호)으로 되어 있는 5층짜리 아파트가 있다. 2차원 배열을 사용하여 101호부터 503호까지 각 집에 살고 있는 사람의 숫자를 입력받아 보관하라. 그리고 이 아파트에 사는 거주자의 숫자를 층별(1층~5층)로 합산하여 출력하고, 호수별(1호~3호)로 합산하여 출력하라. 예를 들어 1층 거주자의 수 는 101호, 102호, 103호 거주자의 수를 합한 것이고, 2호 라인 거주자의 수는 102호, 202호, 302호, 402호, 502호 거주자의 수를 합한 것이다. 
 
+변수는 다음과 같이 사용하라. 
+
+int number[][] = new int[5][3]; // 각 집의 거주자 수, 층별, 호수별 중복 리스트 
+
+int newnum; // 입력받은 숫자 
+
+int floor_total[] = new int[5]; // 층별 거주자 합계 리스트 (1층, 2층, 3층, 4층, 5층) 
+
+int line_total[] = new int[3]; // 호수별 거주자 합계 리스트 (1호라인, 2호라인, 3호라인) 
+
+int total; // 아파트의 총 거주자 수 
+
+int ho; // 아파트 호를 나타내는 변수 
+
+int i, j; // 반복문 사용을 위한 변수
+
+실행 예시
+```
+Enter number of people in room 101 > 3
+Enter number of people in room 102 > 4
+Enter number of people in room 103 > 6
+Enter number of people in room 201 > 2
+Enter number of people in room 202 > 7
+Enter number of people in room 203 > 5
+Enter number of people in room 301 > 7
+Enter number of people in room 302 > 4
+Enter number of people in room 303 > 3
+Enter number of people in room 401 > 4
+Enter number of people in room 402 > 3
+Enter number of people in room 403 > 2
+Enter number of people in room 501 > 1
+Enter number of people in room 502 > 3
+Enter number of people in room 503 > 4
+Number of people living in 1 floor is 13
+Number of people living in 2 floor is 14
+Number of people living in 3 floor is 14
+Number of people living in 4 floor is 9
+Number of people living in 5 floor is 8
+
+Number of people living in 1 line is 17
+Number of people living in 2 line is 21
+Number of people living in 3 line is 20
+
+Number of people living in this apartment is 58
+```
 
 ------------------------------------------------------------------------------------------------
 
