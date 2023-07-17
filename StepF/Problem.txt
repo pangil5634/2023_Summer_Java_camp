@@ -31,19 +31,134 @@ Second largest number is 6th number 88
 
 ------------------------------------------------------------------------------------------------
 
+# F02 -  심사점수 계산
+심사점수를 10개 입력받아 리스트에 저장한 후, 이 중에서 가장 큰 점수와 가장 작은 점수를 제외한 8개의 점수에 대한 평균을 계산하여 출력하라. 변수는 다음과 같이 사용하라. 
 
+double score[] = new double[10]; // 심사점수 리스트 
+
+float maxscore, minscore; // 가장 큰 점수, 가장 작은 점수 
+
+float total; // 점수 총 합계 
+
+float average; // 평균점수 
+
+float newnum; // 숫자 입력을 위한 변수 
+
+int i; // 반복문을 위한 변수 
+
+실행 예시
+```
+Enter 1th score > 9.5
+Enter 2th score > 6.8
+Enter 3th score > 7.9
+Enter 4th score > 9.9
+Enter 5th score > 4.6
+Enter 6th score > 6.2
+Enter 7th score > 7.7
+Enter 8th score > 5.4
+Enter 9th score > 8.0
+Enter 10th score > 7.6
+Average is 7.4
+```
 
 ------------------------------------------------------------------------------------------------
 
+# F03 -   5명의 국, 영, 수 3과목 점수의 과목별 총점, 평균값 구하기
+학생 5명의 국어, 영어, 수학 점수를 각각 입력받아 저장한 후에, 각 과목별 총점과 평균 점수를 계산하여 출력하라. 변수는 다음과 같이 사용하라. 
 
+int jumsu[][] = new int[5][3]; // 5명의 3과목 점수를 저장하고 있는 중복 리스트 
+
+int sum[] = new int[3]; // 3과목 총점 리스트 
+
+double average[] = new double[3]; // 3과목 평균 리스트 
+
+int kor, eng, mat; // 3과목 점수 입력을 위한 변수 
+
+int i, j; // 반복문을 위한 변수 
+
+실행 예시
+```
+Enter Korean, English, Math score of 1th student > 95 85 75
+Enter Korean, English, Math score of 2th student > 87 79 88
+Enter Korean, English, Math score of 3th student > 95 85 75
+Enter Korean, English, Math score of 4th student > 65 77 79
+Enter Korean, English, Math score of 5th student > 77 88 99
+Total Korean score is 419, average is 83.8
+Total English score is 414, average is 82.8
+Total Math score is 416, average is 83.2
+```
 
 ------------------------------------------------------------------------------------------------
 
+# F05 -  비만판정
+10명의 신장(cm단위)과 체중(kg단위)를 입력받은 후, 이들 중 몇 번째 사람들이 비만인지를 판정하여 출 력하라. 그리고 도합 몇 명이 비만인지 출력하라. 단, 비만여부는 다음 비만도 수치가 25이상인 경우에 "비만"으로 판단한다. 비만도 수치 = 체중(kg) / (신장(m)의 제곱) 으로 계산한다. 이 때, 신장은 미터 단위로 환산해야 함을 유 의하라. 
 
+변수는 다음과 같이 사용하라. 
+
+int height, weight; // 입력받은 신장(cm), 체중(kg) 
+
+float bmi; // 계산된 비만도 수치 
+
+float bmilist[][] = new float[10][3]; // 10명에 대한 신장, 체중, 비만도수치를 담고 있는 리스트 
+
+int count; // 비만인 사람의 숫자 
+
+int i; // 반복문을 위한 변수
+
+실행 예시
+```
+Enter height(cm) and weight(kg) 166 56
+Enter height(cm) and weight(kg) 176 90
+Enter height(cm) and weight(kg) 187 60
+Enter height(cm) and weight(kg) 155 47
+Enter height(cm) and weight(kg) 170 75
+Enter height(cm) and weight(kg) 173 80
+Enter height(cm) and weight(kg) 165 50
+Enter height(cm) and weight(kg) 182 73
+Enter height(cm) and weight(kg) 158 48
+Enter height(cm) and weight(kg) 170 66
+2th person is obesity
+5th person is obesity
+6th person is obesity
+3 people is obesity
+```
 
 ------------------------------------------------------------------------------------------------
 
+# F06 - 5층 아파트의 거주자 숫자 구하기
+한 층에 3집(1호, 2호, 3호)으로 되어 있는 5층짜리 아파트가 있다. 2차원 배열을 사용하여 101호부터 503호까지 각 집에 살고 있는 사람의 숫자를 입력받아 보관하라. 그리고 이 아파트에 사는 거주자는 모두 몇 명인지 출력하라. 
 
+변수는 다음과 같이 사용하라. 
+
+int number[][] = new int[5][3]; // 각 집의 거주자 수, 층별, 호수별 중복 리스트 
+
+int newnum; // 입력받은 숫자 
+
+int total; // 아파트의 총 거주자 수 
+
+int ho; // 아파트 호를 나타내는 변수 
+
+int i, j; // 반복문 사용을 위한 변수
+
+실행 예시
+```
+Enter number of people in room 101 > 3
+Enter number of people in room 102 > 4
+Enter number of people in room 103 > 6
+Enter number of people in room 201 > 2
+Enter number of people in room 202 > 7
+Enter number of people in room 203 > 5
+Enter number of people in room 301 > 7
+Enter number of people in room 302 > 4
+Enter number of people in room 303 > 3
+Enter number of people in room 401 > 4
+Enter number of people in room 402 > 3
+Enter number of people in room 403 > 2
+Enter number of people in room 501 > 1
+Enter number of people in room 502 > 3
+Enter number of people in room 503 > 4
+Number of people living in this apartment is 58
+```
 
 ------------------------------------------------------------------------------------------------
 
