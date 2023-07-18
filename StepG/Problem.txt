@@ -306,11 +306,128 @@ Your total charge is 56350
 
 ------------------------------------------------------------------------------------------------
 
+# G06 - 쇼핑몰 매출 계산기
 
+어떤 가게에서 세 종류의 제품(가죽장갑 1만원, 털장갑 6천원, 비닐장갑 3천원)을 판매하고 있다. 손님들이 들어오면 이 제품들에 대해 각각 몇 개를 구입할 것인지를 입력받아서 판매금액을 계산하여 출력하라. 
+구입 개수를 모두 0으로 입력하게 되면 판매가 종료되도록 하며, 지금까지 판매한 제품의 종류별 개수와 총 매출 금액을 화면에 출력하라.
+
+변수는 다음과 같이 사용한다.
+
+int[] order = {0,0,0}; // 입력받는 구매 제품 개수 리스트 [가죽장갑, 털장갑, 비닐장갑]
+
+int sale; // 계산한 판매금액
+
+int total_sale; // 총 매출액 총액
+
+int[] total_order = {0,0,0}; // 총 판매 개수 리스트 [가죽장갑, 털장갑, 비닐장갑]
+
+int[] price = {10000, 6000, 3000}; // 제품별 가격
+
+int i; // 반복문을 위한 변수
+
+실행 예)
+
+```
+There are three type of products
+(1. Leather gloves, 2. Wool gloves, 3. Vinyl gloves)
+
+How many first products do you want to buy? > 1
+How many second products do you want to buy? > 1
+How many third products do you want to buy? > 1
+The price is 19000
+
+How many first products do you want to buy? > 2
+How many second products do you want to buy? > 3
+How many third products do you want to buy? > 4
+The price is 50000
+
+How many first products do you want to buy? > 0
+How many second products do you want to buy? > 20
+How many third products do you want to buy? > 1
+The price is 123000
+
+How many first products do you want to buy? > 3
+How many second products do you want to buy? > 5
+How many third products do you want to buy? > 5
+The price is 75000
+
+How many first products do you want to buy? > 0
+How many second products do you want to buy? > 0
+How many third products do you want to buy? > 0
+Total price from now on is 267000
+```
 
 ------------------------------------------------------------------------------------------------
 
+# G07 - 놀이공원 매표소
 
+놀이공원 매표소 프로그램을 제작하라. 프로그램 시작하면 몇 팀이 방문하였는지 입력받아 팀의 수만큼 다음 과 같은 순서로 진행하도록 한다.
+
+1) 팀별 인원 구성을 입력받는다. 인원구성은 (초등학생, 청소년, 일반인, 경로대상) 4종류별 인원수를 숫자로 입력받는다. 
+
+2) 팀별 정상요금을 계산한다. 1인당 요금은 다음과 같다. 
+
+  - 초등학생 : 5000원, 
+
+  - 청소년 : 10000원, 
+
+  - 일반인 : 15000원, 
+
+  - 경로대상 : 3000원
+
+3) 팀 별로 할인카드 소지 여부를 확인한다. 할인카드 종류별 할인율은 다음과 같다. - 카드없음 : 할인 없음, - 일반등급 카드 : 10% 할인, - VIP 등급 카드 : 20% 할인
+
+4) 최종 계산된 팀별 입장료를 출력한다. 모든 팀에 대한 처리가 완료되면 다음 내용을 화면에 출력하라. 
+
+(1) 총 방문자 수
+
+(2) 인원구성별 방문자 합계 (4종류)
+
+(3) 총 입장료
+
+
+변수는 다음과 같이 사용하라.
+```
+int team_count; // 방문한 팀수
+int[] charge = {5000, 10000, 15000, 3000};// 연령별 수
+int[] count = new int[4]; // 입력받은 연령별 인원 수
+int[] v_count = new int[4]; // 연령별 방문자 합계
+int total_count = 0; // 총 방문자 수
+int sum; // 팀별 계산한 요금
+int total_sum =0; // 총 요금
+int membership = 0; // 할인카드 종류(카드없음:0, 일반등급 카드 : 1, VIP 등급 카드 : 2)
+int i, j; // 반복문을 위한 변수
+```
+
+실행 예)
+
+```
+Enter number of team > 4
+
+Enter a number of 1 th team member (child, youth, adult, old) > 2 1 2 0
+Enter a discount membership type of 1 th team (no membership:0 , normal:1 , VIP:2) > 2
+Admission fees of 1th team is 40000
+
+Enter a number of 2 th team member (child, youth, adult, old) > 5 0 1 0
+Enter a discount membership type of 2 th team (no membership:0 , normal:1 , VIP:2) > 0
+Admission fees of 2th team is 40000
+
+Enter a number of 3 th team member (child, youth, adult, old) > 4 0 2 2 
+Enter a discount membership type of 3 th team (no membership:0 , normal:1 , VIP:2) > 1
+Admission fees of 3th team is 50400
+
+Enter a number of 4 th team member (child, youth, adult, old) > 0 5 1 0
+Enter a discount membership type of 4 th team (no membership:0 , normal:1 , VIP:2) > 0
+Admission fees of 4th team is 65000
+
+Total number of visitors 25
+Total number of child 11
+Total number of youth 6
+Total number of adult 6
+Total number of old 2
+
+Total free is 195400
+```
 
 ------------------------------------------------------------------------------------------------
 
