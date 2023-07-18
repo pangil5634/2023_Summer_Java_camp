@@ -2,11 +2,9 @@
 class Main {
     public static void main(String[] args) {
         Main stepG = new Main();
-        stepG.g07();
+        stepG.h01();
     }
 
-    void g07() {
-        Subclass subclass = new Subclass();
-
+    void h01() {
     }
 }
