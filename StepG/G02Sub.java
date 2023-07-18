@@ -3,11 +3,10 @@ package StepG;
 import java.util.Scanner;
 
 public class G02Sub {
+    Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
     // count 수 만큼 온도 입력 받는 메소드
     public double[] getInputDegree(int count) {
-
-        Scanner sc = new Scanner(System.in); // 스캐너 사용 선언
 
         double[] degress = new double[count]; // 온도 리스트
         double input_degree = 0.0; // 입력받은 온도
@@ -45,7 +44,7 @@ public class G02Sub {
     // 온도 구간 별 개수 출력 메소드
     public void printDegreesType(double[] degress) {
         // String[] degree_name = { "냉수", "미온수", "온수", "끓는물" };
-        String[] degree_name = { "cold", "warm", "hot", "boiling" };
+        // String[] degree_name = { "cold", "warm", "hot", "boiling" };
         int[] count = { 0, 0, 0, 0 }; // 입력 횟수 목록 (순서대로 냉수 입력 횟수, 미온수 입력 횟수, 온수 입력 횟수, 끓는 물 입력 횟수)
 
         // 온도 비교 후 온도 구간 별 개수 증가
