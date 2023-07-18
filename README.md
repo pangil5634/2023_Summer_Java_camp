@@ -12,11 +12,11 @@ StepD : 23.07.12 CLEAR
 <br>
 StepE : 23.07.15 CLEAR
 <br>
-StepF : 23.07.16 CLEAR (예정)
+StepF : 23.07.16 CLEAR
 <br>
-StepG :
+StepG : 23.07.18 CLEAR
 <br>
-StepH :
+StepH : 23.07.19 CLEAR (예정)
 <br>
 StepI :
 <br>
