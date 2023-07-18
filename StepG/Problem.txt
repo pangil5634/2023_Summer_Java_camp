@@ -66,11 +66,114 @@ There are 4 olds.
 
 ------------------------------------------------------------------------------------------------
 
+# G02 - 물의 온도 구간 판정
 
+물의 온도를 10회 입력받은 후, 이 물이 각각 어느 정도의 온수인지 판정하여 그 결과를 출력하라. 출력할 내용은 입력된 10개의 온도 값, 냉수 입력 횟수, 미온수 입력 횟수, 온수 입력 횟수, 끓는 물 입력 횟수를 각각 출력하라. 
+
+단, 온수의 판정 구간은 다음과 같이 판정한다. 
+```
+음수 값 (0미만) : 잘못입력
+0도 ~ 25도 미만 : 냉수
+25도 ~ 40도 미만 : 미온수
+40도 ~ 80도 미만 : 온수
+80도 이상 : 끓는 물
+```
+
+변수는 다음과 같이 사용하라.
+
+int input_degree; // 입력받은 온도
+
+double[] degrees = new double[10] // 온도 리스트
+
+String[] degree_name = {"냉수", "미온수", "온수", "끓는물"};
+
+int[] count = {0,0,0,0}; // 입력 횟수 목록 (순서대로 냉수 입력 횟수, 미온수 입력 횟수, 온수 입력 횟수, 끓는 물 입력 횟수)
+
+int i; // 반복문을 위한 변수
+
+int sel; // 온도 판정 번호 (0,1,2,3)
+
+
+```
+Enter water temperature > 10.5
+Enter water temperature > 25.1
+Enter water temperature > 88.4
+Enter water temperature > 45.0
+Enter water temperature > 30.5
+Enter water temperature > 15.7
+Enter water temperature > 46.7
+Enter water temperature > 85.0
+Enter water temperature > 68.0
+Enter water temperature > 0.5
+
+1th water temperature is 10.5 cold water
+2th water temperature is 25.1 warm water
+3th water temperature is 88.4 boiling water
+4th water temperature is 45.0 hot water
+5th water temperature is 30.5 warm water
+6th water temperature is 15.7 cold water
+7th water temperature is 46.7 hot water
+8th water temperature is 85.0 boiling water
+9th water temperature is 68.0 hot water
+10th water temperature is 0.5 cold water
+
+Count of cold water is 3
+Count of warm water is 2
+Count of hot water is 3
+Count of boiling water is 2
+```
 
 ------------------------------------------------------------------------------------------------
 
+# G03 - 점수 계산
 
+학생 5명의 국어, 영어, 수학 점수를 각각 입력받아 저장한 후에, 다음 항목들을 계산하여 출력하라. 
+
+1) 각 과목별 총점과 평균 점수
+
+2) 각 학생별 총점과 평균점수, 평균에 따른 등급
+
+등급은 다음과 같은 기준으로 결정하라.
+```
+평균 90이상 : A
+평균 80이상 ~ 90미만 : B
+평균 70이상 ~ 80미만 : C
+평균 60이상 ~ 70미만 : D
+평균 60미만 : F
+```
+
+변수는 다음과 같이 사용하라.
+```
+int[][] jumsu = new int[5][3];  // 3과목 점수, 총점을 저장하고 있는 중복 리스트
+int[] c_average = new int[3]; // 3과목 총점을 저장하고 있는 중복 리스트
+String[] class_name = {"국어","영어","수학"}; // 과목명 리스트
+int kor, eng, mat; // 3과목 점수 입력을 위한 변수
+int sum, average, grade; // 총점, 평균, 등급 계산을 위한 변수
+i, j // 반복문을 위한 변수
+
+```
+
+실행 예)
+
+```
+Enter Korean, English, Math score of 1th student > 85 95 75
+Enter Korean, English, Math score of 2th student > 90 80 70
+Enter Korean, English, Math score of 3th student > 65 85 75
+Enter Korean, English, Math score of 4th student > 60 70 80
+Enter Korean, English, Math score of 5th student > 60 50 60
+
+1) Total score and average for each subjects
+Total Korean score is 360, average is 72.0
+Total English score is 380, average is 76.0
+Total Math score is 360, average is 72.0
+
+2) Total score and average for each students
+1th student score: Total - 255, average - 85.0, grade - B
+2th student score: Total - 240, average - 80.0, grade - B
+3th student score: Total - 225, average - 75.0, grade - C
+4th student score: Total - 210, average - 70.0, grade - C
+5th student score: Total - 170, average - 56.7, grade - F
+```
 
 ------------------------------------------------------------------------------------------------
 
