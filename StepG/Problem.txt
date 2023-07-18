@@ -177,9 +177,130 @@ Total Math score is 360, average is 72.0
 
 ------------------------------------------------------------------------------------------------
 
+# G04 - 부동산 중개 수수료 계산기
 
+부동산 거래종류(1:매매, 2:임대, 0:계산종료)와 거래금액을 입력받은 후에 이에 대한 중개 수수료를 계산 하여 출력하라. 입력과 출력을 계속 반복하되 계산종료(0)를 입력하면 반복을 중단하고 지금까지의 수수료 총액을 출력하라.
+
+중개 수수료 계산 방법은 아래 표를 참고하라. 
+
+거래종류 : 매매
+
+    거래금액 : 5천만원 미만 / 수수료비율 : 0.6% / 상한금액 :  250,000
+    거래금액 : 5천만원 이상 / 수수료비율 : ~ 2억원 미만 / 상한금액 : 0.5% 800,000
+    거래금액 : 2억원 이상 / 수수료비율 : 0.4% / 상한금액 :  없음
+
+거래종류 : 임대
+
+    거래금액 : 2천만원 미만 / 수수료비율 : 0.5% / 상한금액 : 70,000
+    거래금액 : 2천만원 이상 ~ 5천만원 미만 / 수수료비율 : 0.5% / 상한금액 : 200,000
+    거래금액 : 5천만원 이상 ~ 1억원 미만 / 수수료비율 : 0.4% / 상한금액 : 300,000
+    거래금액 : 1억원 이상 / 수수료비율 : 0.3% / 상한금액 : 없음
+
+변수는 다음과 같이 사용하라.
+
+int kind; // 거래종류(1:매매, 2:임대, 0:계산종료)
+
+int money; // 거래금액
+
+int charge; // 중개 수수료
+
+int total_charge; // 수수료 총액
+
+실행 예)
+
+```
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 1
+Enter the amount of real estate transaction. > 48000000
+The charge is 250000
+
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 1
+Enter the amount of real estate transaction. > 70000000
+The charge is 350000
+
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 1
+Enter the amount of real estate transaction. > 250000000
+The charge is 1000000
+
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 2
+Enter the amount of real estate transaction. > 19000000
+The charge is 70000
+
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 2
+Enter the amount of real estate transaction. > 48000000
+The charge is 200000
+
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 2
+Enter the amount of real estate transaction. > 70000000
+The charge is 280000
+
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 2
+Enter the amount of real estate transaction. > 19000000
+The charge is 70000
+
+Enter the type of real estate transaction(1:Trading, 2:Lease, 0:exit) > 0
+Total charge is 2220000
+```
 
 ------------------------------------------------------------------------------------------------
+
+# G05 - PC방 이용료 계산기
+
+PC방 이용료를 계산하는 프로그램을 작성하라. 사용한 시간(시간, 분)을 입력받은 후 이에 따른 이용료를 화면에 출력하는 것을 반복한다. 시간과 분이 모두 0으로 입력되면 계산을 마치고 지금까지의 이용료 총금액을 출력하라. 
+
+단, 이용료는 매 30분 당 1,000원씩으로 계산하며, 다음과 같이 시간에 따라 할인혜택을 적용한다. 
+
+1) 2시간 이상 3시간 미만 이용자는 비용의 5%를 할인받는다. 
+
+2) 3시간 이상 5시간 미만 이용자는 비용의 10%를 할인받는다. 
+
+3) 5시간 이상 이용자는 비용의 20%를 할인받는다. 
+
+예) 이용시간이 4시간 20분이면 정상금액 9,000원에서 10% 할인을 받아 이용료는 8,100원이 된다.
+
+변수는 다음과 같이 사용한다.
+
+int hour, minute; // 이용한 시간, 분
+
+int charge; // 이용료
+
+int total_charge; // 이용료 총액
+
+실행 예)
+
+```
+Enter hours and minutes of use > 1 20
+Your charge is 3000
+
+Enter hours and minutes of use > 2 40
+Your charge is 5700
+
+Enter hours and minutes of use > 4 20
+Your charge is 8100
+
+Enter hours and minutes of use > 6 0
+Your charge is 9600
+
+Enter hours and minutes of use > 3 30
+Your charge is 6300
+
+Enter hours and minutes of use > 1 50
+Your charge is 4000
+
+Enter hours and minutes of use > 0 50
+Your charge is 2000
+
+Enter hours and minutes of use > 3 40
+Your charge is 7200
+
+Enter hours and minutes of use > 2 10
+Your charge is 4750
+
+Enter hours and minutes of use > 2 59
+Your charge is 5700
+
+Enter hours and minutes of use > 0 0
+Your total charge is 56350
+```
 
 
 
