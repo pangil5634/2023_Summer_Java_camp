@@ -1,7 +1,9 @@
-public class Main {
+package StepH;
+
+public class H01 {
 
     public static void main(String[] args) {
-        Main stepH = new Main();
+        H01 stepH = new H01();
         stepH.h01();
     }
 

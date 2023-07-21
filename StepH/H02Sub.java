@@ -1,5 +1,9 @@
+package StepH;
+
 import java.util.Scanner;
 
-public class Subclass {
+public class H02Sub {
+
     Scanner sc = new Scanner(System.in);
+
 }
