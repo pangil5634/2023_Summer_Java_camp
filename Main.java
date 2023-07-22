@@ -1,30 +1,16 @@
-public class Main {
-
+class Main {
     public static void main(String[] args) {
-        Main stepH = new Main();
-        stepH.h01();
+        Main stepF = new Main();
+        stepF.b02();
     }
 
-    void h01() {
-        H01Sub h01sub = new H01Sub();
-        int answer = 0; // 컴퓨터가 만들어 낸 1부터 100사이의 임의의 숫자
-        int number_try = 0; // 사용자가 제시한 숫자
-        int count = 0; // 사용자가 맞추려고 시도한 횟수
+    void b02() {
+        H02Sub h01sub = new H02Sub();
 
-        answer = h01sub.setRandomNumber(answer);
-        while (true) {
-            number_try = h01sub.getNumberTry(number_try);
-            count++;
-            int result = h01sub.compareNumber(number_try, answer);
+        System.out.println("Enter a number from 1 to 100");
+        int number[] = new int[10];// 사용자가 입력한 숫자 10개
 
-            if (result == 1) {
-                System.out.printf("You figured out the number in %d times\n", count);
-                break;
-            } else if (result == 0 || result == 2) {
-                continue;
-            }
-        }
-
+        number = h01sub.getNumber(number);
+        h01sub.printResult(number);
     }
-
 }

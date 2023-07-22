@@ -2,22 +2,17 @@ package CodingTest;
 
 class B02 {
     public static void main(String[] args) {
-        B02 stepE = new B02();
-        stepE.b02();
+        B02 stepF = new B02();
+        stepF.b02();
     }
 
     void b02() {
+        B02Sub h01sub = new B02Sub();
 
-        B02Sub subclass = new B02Sub();
+        System.out.println("Enter a number from 1 to 100");
+        int number[] = new int[10];// 사용자가 입력한 숫자 10개
 
-        int[][] jumsu = new int[5][3]; // 3과목 점수, 총점을 저장하고 있는 중복 리스트
-        double[] c_average = new double[3]; // 3과목 총점을 저장하고 있는 중복 리스트
-
-        jumsu = subclass.setJumsu(jumsu);
-
-        c_average = subclass.getAverage(c_average, jumsu);
-
-        subclass.printResult(jumsu);
-
+        number = h01sub.getNumber(number);
+        h01sub.printResult(number);
     }
 }

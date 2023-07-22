@@ -1,8 +1,6 @@
-package CodingTest;
-
 import java.util.Scanner;
 
-public class B02Sub {
+public class H02Sub {
 
     Scanner sc = new Scanner(System.in);
 
