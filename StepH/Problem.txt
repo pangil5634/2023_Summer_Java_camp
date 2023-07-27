@@ -135,11 +135,127 @@ User : win - 5, lost - 1, draw - 2
  
 ------------------------------------------------------------------------------------------------
 
+# H05 - 슬롯머신 만들기
 
+간단한 슬롯 머신을 만들어라. 사용자에게 코인의 개수를 숫자로 입력받은 다음에, 1부터 9까지의 숫자 3개 를 랜덤으로 만들어 3개의 숫자가 같으면 상금으로 코인 4개, 2개의 숫자가 같으면 코인 2개를 더해준다. 한 번 할 때마다 코인을 1개 씩 소모하게 되고, 사용자의 코인이 모두 소모될 때까지 게임을 반복시켜라.
+
+변수는 다음과 같이 사용하라.
+
+int coins; // 사용자의 코인 수. (최초에 입력받음)
+
+int number[] = new int[3]; // 랜덤하게 만들어진 슬롯 머신의 숫자 3개의 리스트
+
+int dummy; // 게임스타트를 위한 의미 없는 입력 숫자
+
+int i; // 반복문을 위한 변수
+
+실행예시
+```
+Enter number of coins > 5
+Start 1th game!!! (Enter any number) > 183
+Result of game : 7 8 2 ---> Failed...
+There are 4 coins remaining.
+
+Start 2th game!!! (Enter any number) > 155
+Result of game : 3 4 7 ---> Failed...
+There are 3 coins remaining.
+
+Start 3th game!!! (Enter any number) > 152
+Result of game : 6 5 4 ---> Failed...
+There are 2 coins remaining.
+
+Start 4th game!!! (Enter any number) > 150
+Result of game : 1 4 2 ---> Failed...
+There are 1 coins remaining.
+
+Start 5th game!!! (Enter any number) > 130
+Result of game : 9 9 9 ---> match 3 numbers! got four more coins
+There are 4 coins remaining.
+
+Start 6th game!!! (Enter any number) > 128
+Result of game : 7 2 9 ---> Failed...
+There are 3 coins remaining.
+
+Start 7th game!!! (Enter any number) > 125
+Result of game : 5 3 5 ---> match 2 numbers! got two more coins
+There are 4 coins remaining.
+
+Start 8th game!!! (Enter any number) > 122
+Result of game : 7 5 5 ---> match 2 numbers! got two more coins
+There are 5 coins remaining.
+
+Start 9th game!!! (Enter any number) > 120
+Result of game : 1 6 6 ---> match 2 numbers! got two more coins
+There are 6 coins remaining.
+
+Start 10th game!!! (Enter any number) > 106
+Result of game : 9 7 5 ---> Failed...
+There are 5 coins remaining.
+
+Start 11th game!!! (Enter any number) > 105
+Result of game : 3 6 4 ---> Failed...
+There are 4 coins remaining.
+
+Start 12th game!!! (Enter any number) > 100
+Result of game : 7 2 1 ---> Failed...
+There are 3 coins remaining.
+
+Start 13th game!!! (Enter any number) > 90
+Result of game : 3 1 7 ---> Failed...
+There are 2 coins remaining.
+
+Start 14th game!!! (Enter any number) > 88
+Result of game : 3 9 9 ---> match 2 numbers! got two more coins
+There are 3 coins remaining.
+
+Start 15th game!!! (Enter any number) > 85
+Result of game : 9 6 7 ---> Failed...
+There are 2 coins remaining.
+
+Start 16th game!!! (Enter any number) > 76
+Result of game : 9 6 1 ---> Failed...
+There are 1 coins remaining.
+
+Start 17th game!!! (Enter any number) > 75
+Result of game : 3 8 4 ---> Failed...
+There are 0 coins remaining.
+
+Game over!
+```
 
 ------------------------------------------------------------------------------------------------
 
+# H06 -   5개 숫자의 제곱수 조합 구하기
+2에서 9사이의 숫자 5개를 입력받아 배열에 저장한 후, 이 5개의 숫자들 중 임의의 2개의 숫자 a와 b를 선택하여 a b의 값을 계산하여 이 중에서 가장 큰 수와 가장 작은 수를 만들 수 있는 경우를 찾아내라. 계산 할 때에는 메소드 pow()를 사용하라. 예를 들어 2, 3, 4, 5, 6을 입력한 경우에는 가장 작은 수는 2 3이고, 가장 큰 수는 5 6이 된다.
 
+변수는 다음과 같이 사용하라.
+
+int number[] = new int[5]; // 입력받은 5개의 숫자 리스트
+
+int pow_value[][] = new int[5][5]; //임의의 두 수 a, b로 만들 수 있는 a
+
+b의 값 들, 5 * 5 리스트
+
+int max, min; // 최댓값과 최솟값
+
+int max_a, max_b; // 최댓값을 만들어 내는 경우의 a와 b의 값
+
+int min_a, min_b; // 최솟값을 만들어 내는 경우의 a와 b의 값
+
+int i, j; // 반복문을 위한 변수
+
+실행예시
+```
+Enter 5 numbers from 2 to 9 > 2 3 4 5 6
+Max number is 15625 which is 6 squared of 5
+Min number is 8 which is 3 squared of 2
+```
+
+```
+Enter 5 numbers from 2 to 9 > 5 6 7 8 9
+Max number is 134217728 which is 9 squared of 8
+Min number is 7776 which is 5 squared of 6
+```
 
 ------------------------------------------------------------------------------------------------
 
