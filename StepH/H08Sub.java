@@ -19,7 +19,7 @@ public class H08Sub {
     }
 
     String getReplaceStr(String replaceStr) {
-        System.out.print("=> Enter a sentence to find > ");
+        System.out.print("=> Enter a sentence to replace > ");
         replaceStr = sc.nextLine();
         return replaceStr;
 
