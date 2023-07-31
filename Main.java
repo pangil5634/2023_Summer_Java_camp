@@ -1,16 +1,30 @@
+import java.util.Scanner;
+
 class Main {
+
     public static void main(String[] args) {
-        Main stepF = new Main();
-        stepF.b02();
+        Scanner s = new Scanner(System.in);
+        double num, answer;
+        num = s.nextDouble();
+
+        answer = fibonacci(num);
+        System.out.println(answer);
+
+        s.close();
     }
 
-    void b02() {
-        H02Sub h01sub = new H02Sub();
+    public static double fibonacci(double n) {
+        double result = 0;
 
-        System.out.println("Enter a number from 1 to 100");
-        int number[] = new int[10];// 사용자가 입력한 숫자 10개
+        if (n == 0) {
+            result = 0;
+        }
+        if (n == 1 || n == 2) {
+            result = 1;
+        } else {
+            result = fibonacci(n - 1) + fibonacci(n - 2);
+        }
 
-        number = h01sub.getNumber(number);
-        h01sub.printResult(number);
+        return result;
     }
 }
