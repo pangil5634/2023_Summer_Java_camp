@@ -15,20 +15,12 @@ public class I05 {
     void run() {
 
         SubI05 subi05 = new SubI05();
-        int Big = 0, Normal = 0, Small = 0;
+        System.out.println("Find the maximum of 10 numbers");
 
-        for (int i = 0; i < 10; i++) {
-            byte result = subi05.GetRandom();
+        int max = subi05.MaxOfTen();
+        System.out.println();
+        System.out.println("Maximum value is " + max);
 
-            if (result == 0) {
-                Big++;
-            } else if (result == 1) {
-                Normal++;
-            } else if (result == 2) {
-                Small++;
-            }
-        }
-        subi05.printResult(Big, Normal, Small);
     }
 
 }

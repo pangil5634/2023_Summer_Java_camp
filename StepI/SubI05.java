@@ -6,34 +6,29 @@ public class SubI05 {
 
     Scanner sc = new Scanner(System.in);
 
-    byte GetRandom() {
-        // 파라미터) 없음
-        // 리턴 값) 임의로 만들어낸 숫자가 속하는 구간번호 0.대(70 이상), 1.중(40이상~70미만), 2.소(40미만)
-        byte result = 0;
-        int number = GetNumber();
+    // 10개의 숫자를 입력 받아 배열을 리턴하는 메소드
+    int[] getNumber(int[] number) {
 
-        if (number >= 70) {
-            result = 0;
-        } else if (number >= 40) {
-            result = 1;
-        } else if (number < 40) {
-            result = 2;
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("Enter %dth number > ", i + 1);
+            number[i] = sc.nextInt();
         }
-
-        return result;
-    }
-
-    int GetNumber() {
-        int number = (int) ((Math.random() * 100) + 1);
-        System.out.println("Generated random number is " + number);
 
         return number;
     }
 
-    void printResult(int Big, int Normal, int Small) {
+    // 최대값을 찾는 메소드
+    int MaxOfTen() {
+        int[] number = new int[10];
+        number = getNumber(number);
 
-        System.out.println("1. Big (>= 70) : " + Big);
-        System.out.println("2. Normal (>= 40) : " + Normal);
-        System.out.println("3. Small (< 40) : 2" + Small);
+        int max = 0;
+
+        for (int temp : number) {
+            if (temp > max) {
+                max = temp;
+            }
+        }
+        return max;
     }
 }

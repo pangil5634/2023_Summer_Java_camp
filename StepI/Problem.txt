@@ -139,6 +139,38 @@ Total price is 49000
 
 ------------------------------------------------------------------------------------------------
 
+
+# I05 - 최댓값 리턴하는 메소드 만들기
+
+숫자 10개를 입력받아 이 중 최댓값을 찾아서 리턴하는 메소드 MaxOfTen()을 만들고, 이 메소드를 이용 하여 10개의 숫자 중 최댓값을 출력하라. 
+
+메소드 선언부는 다음과 같다.
+
+```
+int MaxOfTen()
+파라미터) 없음
+리턴 값) 최댓값
+```
+
+실행 예)
+```
+Find the maximum of 10 numbers
+Enter 1th number > 11
+Enter 2th number > 22
+Enter 3th number > 66
+Enter 4th number > 88
+Enter 5th number > 77
+Enter 6th number > 44
+Enter 7th number > 99
+Enter 8th number > 55
+Enter 9th number > 33
+Enter 10th number > 36
+
+Maximum value is 99
+```
+
+------------------------------------------------------------------------------------------------
+
 # I06 - 임의의 숫자를 만들어 구간을 리턴하는 메소드 만들기
 
 1부터 100사이의 임의의 숫자를 만들어서 대(70 이상), 중(40이상~70미만), 소(40미만) 셋 중에 하나 를 판정하여 결과를 리턴하는 메소드 GetRandom()을 만들어라. 그리고 이 메소드를 이용해서 임의의 숫 자 10개에 대해 대, 중, 소가 각각 몇 번씩 포함되어 있는지 개수를 출력하라.
@@ -172,4 +204,43 @@ Generated random number is 41
 
 ------------------------------------------------------------------------------------------------
 
+# I07 - 자판기에서 선택한 음료 가격을 리턴하는 메소드 만들기
+
+자판기의 메뉴를 보여주고 선택하게 하여 선택된 음료의 가격을 리턴하는 메소드 SelectCan()을 만들어라. 그리고 이 메소드를 이용해서 자판기에서 음료를 반복해서 선택하게 하여 총 음료의 개수와 가격을 출력하 라.
+
+자판기의 음료 종류와 가격은 다음과 같다. 
+  
+1.콜라(700원) 2.원두커피(300원) 3.레몬주스(1000원) 4.홍차(500원) 5.코코아(600원)
+
+메소드 선언부는 다음과 같다.
+
+```
+int SelectCan() 
+파라미터) 없음
+리턴 값) 선택한 음료의 가격
+```
+실행 예)
+
+```
+1. Cola(700) 2. coffee(300) 3. lemon tea(1000) 4. milk tea(500) 5. cocoa(600)
+Please select menu > 1
+Do you need more menu? (Y/N) > Y
+
+1. Cola(700) 2. coffee(300) 3. lemon tea(1000) 4. milk tea(500) 5. cocoa(600)
+Please select menu > 2
+Do you need more menu? (Y/N) > Y
+
+1. Cola(700) 2. coffee(300) 3. lemon tea(1000) 4. milk tea(500) 5. cocoa(600)
+Please select menu > 1
+Do you need more menu? (Y/N) > Y
+
+1. Cola(700) 2. coffee(300) 3. lemon tea(1000) 4. milk tea(500) 5. cocoa(600)
+Please select menu > 3
+Do you need more menu? (Y/N) > Y
+
+1. Cola(700) 2. coffee(300) 3. lemon tea(1000) 4. milk tea(500) 5. cocoa(600)
+Please select menu > 4
+Do you need more menu? (Y/N) > N
+Total price for 5 drinks is 3200
+```
 
