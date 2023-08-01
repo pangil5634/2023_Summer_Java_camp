@@ -1,0 +1,244 @@
+
+# J01 - 나이 계산 및 연령대 판정
+[G01] 문제를 참고하여 최대 100명까지 사람들의 2021보다 큰 년도가 입력되기 전까지 태어난 년도를 입력받도록 하라. 입력이 끝나면 AskAge() 메소드를 사용해서 지금까지 입력된 사람들의 나이를 모두 출력 하고, 연령대 별로 각각 몇 명인지 출력하라. AskAge()에서는 태어난 년도를 입력하면 나이를 출력한 후, 유아, 어린이, 청소년, 청년, 중년, 노년 여부 를 판정하여 연령대 번호를 리턴한다.
+
+단, 나이 = 2021 – 태어난 년도 + 1 로 계산하고 연령대 구분은 다음과 같이 판정한다.
+
+7세 미만 : 유아,
+
+7세 이상 ~ 13세미만 : 어린이,
+
+13세 이상 ~ 20세 미만 : 청소년,
+
+20세 이상 ~ 30세 미만 : 청년,
+
+30세 이상 ~ 60세 미만 : 중년,
+
+60세 이상 : 노년
+
+메소드의 선언부는 다음과 같다.
+
+int AskAge(int birthyear);
+
+파라미터) birthyear : 태어난 년도
+
+리턴값) 계산한 나이에 따른 연령대 번호 (0.유아, 1.어린이, 2.청소년, 3.청년, 4.중년, 5.노년)
+
+실행 예시
+```
+Enter a birth year of 1th person > 1999
+This person is 23 years old.
+Enter a birth year of 2th person > 2005
+This person is 17 years old.
+Enter a birth year of 3th person > 1940
+This person is 82 years old.
+Enter a birth year of 4th person > 1970
+This person is 52 years old.
+Enter a birth year of 5th person > 1966
+This person is 56 years old.
+Enter a birth year of 6th person > 1988
+This person is 34 years old.
+Enter a birth year of 7th person > 2010
+This person is 12 years old.
+Enter a birth year of 8th person > 1979
+This person is 43 years old.
+Enter a birth year of 9th person > 1990
+This person is 32 years old.
+Enter a birth year of 10th person > 1981
+This person is 41 years old.
+Enter a birth year of 11th person > 2008
+This person is 14 years old.
+Enter a birth year of 12th person > 2222
+There are 0 babys.
+There are 1 childs.
+There are 2 youths.
+There are 1 youngs.
+There are 6 adults.
+There are 1 olds.
+```
+
+------------------------------------------------------------------------------------------------
+
+# J02 - 심사점수 계산
+
+심사점수를 10개를 입력받아 리스트에 저장한 후, 이 리스트를 파라미터로 하여 가장 큰 점수를 구하는 Max()와 가장 작은 점수를 구하는 Min()을 사용하여 10개의 점수 중 최대점수와 최소점수를 제외한 8개 의 점수에 대한 평균을 계산하여 출력하라.
+
+메소드의 선언부는 다음과 같다.
+
+double Max(double num[]);
+
+파라미터) num : 숫자 리스트
+
+리턴값) 숫자 리스트에서 가장 큰 값
+
+double Min(double num[]);
+
+파라미터) num : 숫자 리스트
+
+리턴값) 숫자 리스트에서 가장 작은 값
+
+실행 예시
+```
+Enter 1th score > 7.5
+Enter 2th score > 9.9
+Enter 3th score > 8.4
+Enter 4th score > 6.4
+Enter 5th score > 5.8
+Enter 6th score > 8.0
+Enter 7th score > 6.9
+Enter 8th score > 7.0
+Enter 9th score > 7.3
+Enter 10th score > 8.9
+Average is 7.5
+```
+
+------------------------------------------------------------------------------------------------
+
+# J03 - 물의 온도 구간 개수 판정
+물의 온도를 10회 입력받은 후, 이 물이 각각 어느 정도의 온수인지 AskWater()를 통해 판정하여 그 결과 를 출력하라. 출력할 내용은 입력된 10개의 온도 값, 냉수 입력 횟수, 미온수 입력 횟수, 온수 입력 횟수, 끓는 물 입력 횟수를 각각 출력하라.
+
+단, 온수의 판정 구간은 다음과 같이 판정한다.
+
+ 0도 ~ 25도 미만 : 냉수 
+
+ 25도 ~ 40도 미만 : 미온수
+
+40도 ~ 80도 미만 : 온수
+
+80도 이상 : 끓는 물
+
+메소드의 선언부는 다음과 같다. byte AskWater(double degree);
+
+파라미터) degree: 온도
+
+리턴 값) 온도 판정 번호 (0.냉수, 1.미온수, 2.온수, 3.끓는 물)
+
+실행 예시
+```
+Enter 1th water temperature > 15.5
+Enter 2th water temperature > 20.5
+Enter 3th water temperature > 27.7
+Enter 4th water temperature > 35.0
+Enter 5th water temperature > 40.5
+Enter 6th water temperature > 66.7
+Enter 7th water temperature > 90.1
+Enter 8th water temperature > 100.0
+Enter 9th water temperature > 77.7
+Enter 10th water temperature > 28.0
+1th water temperature is 15.5 cold water
+2th water temperature is 20.5 cold water
+3th water temperature is 27.7 warm water
+4th water temperature is 35.0 warm water
+5th water temperature is 40.5 hot water
+6th water temperature is 66.7 hot water
+7th water temperature is 90.1 boiling water
+8th water temperature is 100.0 boiling water
+9th water temperature is 77.7 hot water
+10th water temperature is 28.0 warm water
+Count of cold water is 2
+Count of warm water is 3
+Count of hot water is 3
+Count of boiling water is 2
+```
+
+------------------------------------------------------------------------------------------------
+
+# J04 - 연중 날짜 계산 메소드를 이용한 날짜 간격 세기
+날짜 2개를 입력받은 후, 이 2개의 날짜 간격은 며칠인지 계산하여 출력하라.
+
+단, 월과 일로 파라미터로 넘 기면 이 날짜가 1년 중 몇 번째 날에 해당되는지 리턴하는 메소드 CalcDate() 메소드를 만들어 사용하라. 이 메소드에서 매 월의 날 수 계산 시 다음과 같이 매월의 날 수를 배열로 만들어 이를 이용하여 계산하라.
+
+int monthdays = {31,28,31,30,31,30,31,31,30,31,30,31}; // 1~12월의 날 수
+
+메소드의 선언부는 다음과 같다.
+
+int CalcDate(int month, int day);
+
+파라미터) month : 월, day : 일
+
+리턴값) 1년 중 해당 날짜가 몇 번째 날인지의 결과 값 (1~365)
+
+실행 예시
+```
+Enter first day (month day) > 5 5
+Enter second day (month day) > 1 1
+The interval between two dates is 124 days.
+```
+
+```
+Enter first day (month day) > 1 1
+Enter second day (month day) > 5 5
+The interval between two dates is 124 days.
+```
+
+```
+Enter first day (month day) > 13 1
+Enter second day (month day) > 2 30
+Invalid input!
+```
+
+
+
+------------------------------------------------------------------------------------------------
+
+# J05 - 주차 관리 시스템
+주차장에서 차량들의 주차 관리 시스템을 만들어라. 차량마다 주차를 시작한 시간을 시와 분으로 입력받고, 주차를 종료한 시간을 시와 분으로 입력받은 후, 이를 CalcParking() 메소드에 파라미터로 넘겨 주차요금 을 리턴받도록 하라. 차량이 더 있는지 물어서 더 이상 차량이 없을 때까지 반복해서 요금을 계산하되 반복 이 끝나면 지금까지 계산한 차량의 수량과 총 주차요금을 화면에 출력하라. 주차요금은 10분당 500원으로 한다.
+
+메소드의 선언부는 다음과 같다.
+
+int CalcParking(int start_h, int start_m, int end_h, int end_m) :
+
+파라미터) start_h : 주차시작 시, start_m : 주차시작 분, end_h : 주차종료 시, end_m : 주차종료 분
+
+리턴값) 주차시작 시간(시, 분)부터 종료 시간(시, 분)까지의 주차요금(원)
+
+실행 예시
+```
+Enter parking start time of 1th car (H M) > 10 30
+Enter parking end time of 1th car (H M) > 11 15
+Parking price : 2500
+Do you want to enter more? (Y/N) > Y
+Enter parking start time of 2th car (H M) > 9 10
+Enter parking end time of 2th car (H M) > 15 10
+Parking price : 18000
+Do you want to enter more? (Y/N) > Y
+Enter parking start time of 3th car (H M) > 12 10
+Enter parking end time of 3th car (H M) > 14 55
+Parking price : 8500
+Do you want to enter more? (Y/N) > Y
+Enter parking start time of 4th car (H M) > 11 00
+Enter parking end time of 4th car (H M) > 11 05
+Parking price : 500
+Do you want to enter more? (Y/N) > N
+Total price for 4 cars is 29500
+```
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
