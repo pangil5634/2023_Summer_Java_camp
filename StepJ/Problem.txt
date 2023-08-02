@@ -215,23 +215,174 @@ Total price for 4 cars is 29500
 
 ------------------------------------------------------------------------------------------------
 
+# J06 - 피보나치 수 구하기
+n이 1부터 20까지 증가하는 경우 각각의 피보나치 수 fibonacci(n)을 출력하라. 피보나치 수는 다음과 같 이 정의한다.
 
+fibonacci(n) 
+
+    = 1 if (n = 1 or n = 2)
+
+    = fibonacci(n - 1) + fibonacci(n - 2) if (n > 2)
+
+단, 메소드의 선언부는 다음과 같이 사용하라.
+
+int fibonacci(int n) ;
+
+실행 예시
+```
+Fibonacci numbers from 1 to 20 are as follows.
+1st : 1
+2nd : 1
+3rd : 2
+4th : 3
+5th : 5
+6th : 8
+7th : 13
+8th : 21
+9th : 34
+10th : 55
+11th : 89
+12th : 144
+13th : 233
+14th : 377
+15th : 610
+16th : 987
+17th : 1597
+18th : 2584
+19th : 4181
+20th : 6765
+```
 
 ------------------------------------------------------------------------------------------------
 
+# J07 - 2의 제곱수 구하기
+반복해서 임의의 숫자 n을 입력받은 후 2 n을 계산하여 출력하되, 재귀메소드를 이용하여 계산하라. 이 때 사용할 재귀메소드 poweroftwo()의 정의는 다음과 같다.
 
+poweroftwo(n)
+
+    = 1 if (n = 0)
+
+    = 2 * poweroftwo(n-1) if (n > 0)
+
+단, 메소드의 선언부 다음과 같이 사용하라.
+
+int poweroftwo(int n) ;
+
+실행 예시
+```
+Enter a number. (0 for exit) > 2
+2 square of 2 is 4
+Enter a number. (0 for exit) > 4
+4 square of 2 is 16
+Enter a number. (0 for exit) > 8
+8 square of 2 is 256
+Enter a number. (0 for exit) > 10
+10 square of 2 is 1024
+Enter a number. (0 for exit) > 16
+16 square of 2 is 65536
+Enter a number. (0 for exit) > 20
+20 square of 2 is 1048576
+Enter a number. (0 for exit) > 24
+24 square of 2 is 16777216
+Enter a number. (0 for exit) > 5
+5 square of 2 is 32
+Enter a number. (0 for exit) > 7
+7 square of 2 is 128
+Enter a number. (0 for exit) > 0
+```
 
 ------------------------------------------------------------------------------------------------
 
+# J08 - Ackermann 수 구하기
+Ackermann's Function A 는 다음과 같이 정의된다.
 
+A( i, j ) 를 재귀 호출 메소드로 만들고, 이 메소드 를 이용하여 A(0,0) 에서 A(3,3) 의 값을 구하라.
+
+Ackermann's Function A A(0, j) = j+1 i = 0 이고, j ≥ 0 인 경우
+
+A(i, 0) = A(i-1, 1) i > 0 이고 j = 0 인 경우
+
+A(i, j) = A(i-1, A(i, j-1)) i 와 j 모두 0보다 큰 경우
+
+단, 메소드의 선언부는 다음과 같이 사용하라.
+
+int Ackermann(int i, int j) ;
+
+실행 예시
+```
+Ackermannonacci numbers from 1 to 20 are as follows.
+Ackermann(0, 0) = 1
+Ackermann(0, 1) = 2
+Ackermann(0, 2) = 3
+Ackermann(0, 3) = 4
+Ackermann(1, 0) = 2
+Ackermann(1, 1) = 3
+Ackermann(1, 2) = 4
+Ackermann(1, 3) = 5
+Ackermann(2, 0) = 3
+Ackermann(2, 1) = 5
+Ackermann(2, 2) = 7
+Ackermann(2, 3) = 9
+Ackermann(3, 0) = 5
+Ackermann(3, 1) = 13
+Ackermann(3, 2) = 29
+Ackermann(3, 3) = 61
+```
 
 ------------------------------------------------------------------------------------------------
 
+# J09 - pow() 메소드 만들기
+n^a를 계산할 수 있는 math 모듈 내의 pow() 메소드와 같은 일을 하는 power() 메소드를 재귀 호출을 이 용하여 만들어라. 그리고 숫자 2개(num1, num2)를 입력받아 num1num2 를 계산하라. 단, power() 메소드는 다음과 같이 정의된다.
 
+power(n, a) 
+
+    = 1 if (a = 0)
+
+    = n if (a = 1)
+
+    = power(n, a/2) * power(n, a/2) if (a > 0, a 는 짝수)
+
+    = power(n, a/2) * power(n, a/2) * n if (a > 0, a 는 홀수)
+
+단, 메소드의 선언부는 다음과 같이 사용하라.
+
+int power( int num1, int num2 ) ;
+
+실행 예시
+```
+Enter two numbers > 10 5
+5 square of 10 is 100000
+```
+
+```
+Enter two numbers > 2 16
+16 square of 2 is 65536
+```
 
 ------------------------------------------------------------------------------------------------
 
+# J10 - 피보나치 수열로 황금비율 구하기
+문제 [J06]에서 제작한 피보나치 메소드 fibonacci(n)를 사용하여 황금비율을 찾아내라. n번째 황금비율 이란 피보나치 수열의 연속적인 2개의 숫자의 비율(n+1번째수 / n번째 수)로 정한다. 단, 계산한 비율이 직전의 비율에 비해 그 차이가 백만분의 1보다 작게 되면 멈추도록 하라.
 
+실행 예시
+```
+2th ratio (2 / 1) : 2.000000
+3th ratio (3 / 2) : 1.500000
+4th ratio (5 / 3) : 1.666667
+5th ratio (8 / 5) : 1.600000
+6th ratio (13 / 8) : 1.625000
+7th ratio (21 / 13) : 1.615385
+8th ratio (34 / 21) : 1.619048
+9th ratio (55 / 34) : 1.617647
+10th ratio (89 / 55) : 1.618182
+11th ratio (144 / 89) : 1.617978
+12th ratio (233 / 144) : 1.618056
+13th ratio (377 / 233) : 1.618026
+14th ratio (610 / 377) : 1.618037
+15th ratio (987 / 610) : 1.618033
+16th ratio (1597 / 987) : 1.618034
+17th ratio (2584 / 1597) : 1.618034
+```
 
 ------------------------------------------------------------------------------------------------
 
