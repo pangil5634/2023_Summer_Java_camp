@@ -1,0 +1,212 @@
+# K01 - 메뉴판 저장하기
+
+다음 결과예 에서와 같이 메뉴 내용을 입력받은 후, 화면에 출력하는 프로그램을 제작하고 테스트하라.
+(멤버변수와 메소드 및 파라미터, 리턴타입은 각자 결정함)
+
+새로운 클래스를 제작하고, 클래스의 멤버메소드를 제작하라.
+```
+클래스명 : MenuPan
+- 입력 메소드
+- 출력 메소드
+main 메소드 포함 클래스 명 : Main
+```
+
+```
+Enter number, name, origin, price > 1 pig korean 9000
+================================================
+num     name     origin     price
+  1     pig      korean     9000
+```
+
+------------------------------------------------------------------------------------------------
+
+# K02 - 메뉴판 저장하기2
+
+K01에서 만든 MenuPan을 변경하지 않고, 다음에서와 같이 다섯 개의 메뉴를 입력할 수 있도록 프로그램을 제작하고 테스트하라.(멤버변수와 메소드 및 파라미터, 리턴타입은 각자 결정함)
+
+main 메소드 포함 클래스 명 : K02
+
+```
+Enter number of menu > 4
+1: Enter number, name, origin, price > 1 pig Korean 9000
+2: Enter number, name, origin, price > 2 rib USA 15000
+3: Enter number, name, origin, price > 3 sirloin Australia 30000
+4: Enter number, name, origin, price > 4 seasonedrib Korean 25000
+================================================
+num     name     origin     price
+  1     pig      Korean     9000
+  2     rib      USA        15000
+  3     sirloin     Australia     30000
+  4     seasonedrib     Korean     25000
+```
+
+------------------------------------------------------------------------------------------------
+
+# K03 - 좌표 저장하기
+
+화면과 같이 1개의 좌표 값(x,y)을 입력받아 point 클래스에 저장하라. 그리고 정보를 다시 읽어 들여서 이 좌표가 몇 사분면에 위치하는 지를 알아내는 메소드를 통해 각 사분면에 속하는 좌표의 갯수를 출력하라. 
+
+메소드 선언부는 다음과 같다. 
+
+클래스명 : point 
+
+int get_area(double x, double y) ;
+
+파라미터 : x좌표, y좌표
+
+리턴값 : 좌표가 위치한 사분면 (1,2,3,4, 만일 x 또는 y가 0이면 리턴값은 0이다.)
+
+main 메소드 포함 클래스 명 : K03
+
+```
+Enter coordinate (X, Y) > 1.0 2.0
+================================================
+Coordinate is located on first quadrants
+Number of coordinates on 1th quadrants is 1
+Number of coordinates on 2th quadrants is 0
+Number of coordinates on 3th quadrants is 0
+Number of coordinates on 4th quadrants is 0
+```
+
+------------------------------------------------------------------------------------------------
+
+# K04 - 좌표 저장하기2
+
+K03에서 만든 point 클래스를 변경하지 않고, 화면과 같이 원하는 수만큼의 좌표 값(x,y)을 입력받아 이 좌표가 몇 사분면에 위치하는 지를 알아내는 메소드를 통해 각 사분면에 속하는 좌표의 갯수를 출력하라. 
+
+메소드 선언부는 다음과 같다. 
+
+main 메소드 포함 클래스 명 : K04
+
+```
+Enter a number of coordinate > 5
+Enter 1th coordinate (X, Y) > 1.0 2.0
+Enter 2th coordinate (X, Y) > -1.0 2.0
+Enter 3th coordinate (X, Y) > -1.0 -2.0
+Enter 4th coordinate (X, Y) > 1.0 -2.0
+Enter 5th coordinate (X, Y) > 3.5 4.7
+================================================
+1th coordinate is located on first quadrants
+2th coordinate is located on second quadrants
+3th coordinate is located on third quadrants
+4th coordinate is located on fourth quadrants
+5th coordinate is located on first quadrants
+
+Number of coordinates on 1th quadrants is 2
+Number of coordinates on 2th quadrants is 1
+Number of coordinates on 3th quadrants is 1
+Number of coordinates on 4th quadrants is 1
+```
+
+
+
+------------------------------------------------------------------------------------------------
+
+# K05 - 나이 계산
+
+화면과 같이 아이디와 비밀번호를 저장하는 클래스를 생성하여 입력받는 메소드와 출력하는 메소드를 생성
+
+하라. 메소드 선언부는 다음과 같다. 클래스명 : UserInfo
+
+void input(); //입력받는 메소드
+
+void print(int index); //출력하는 메소드
+
+main 메소드 포함 클래스 명 : K05
+
+```
+Enter id, password > hong 1234
+```
+
+```
+================================================
+```
+
+```
+Registered students list are as follows
+```
+
+```
+------------------------------------------------
+```
+
+```
+num     name    password
+```
+
+```
+1       hong    1234
+```
+
+------------------------------------------------------------------------------------------------
+
+# K06 - 사용자 목록 저장하기2
+
+K05에서 만든 UserInfo 클래스를 변경하지 않고, 입력 받은 학생 수의 아이디와 비밀번호를 저장하는 클래스를 생성하여 입력받는 메소드와 출력하는 메소드를 생성하라. 
+
+main 메소드 포함 클래스 명 : K06
+
+
+```
+Enter a number of students > 5
+Enter id, password of 1th student > hong 1234
+Enter id, password of 2th student > kim 2345
+Enter id, password of 3th student > lee i123
+Enter id, password of 4th student > kkk ccdd23
+Enter id, password of 5th student > gogil 5588
+================================================
+Registered 5 students list are as follows
+------------------------------------------------
+num     name    password
+1       hong    1234
+2       kim     2345
+3       lee     i123
+4       kkk     ccdd23
+5       gogil   5588
+```
+
+------------------------------------------------------------------------------------------------
+
+# K07 - 학생 점수 결과 저장하기
+
+학생들의 국어, 영어, 수학 점수를 입력받아 총점과 평균을 계산하고 이 클래스를 이용하여 5명의 정보를 입력하고 출력할 수 있도록 프로그램을 완성하라.
+
+등급은 다음과 같은 기준으로 결정하라.
+```
+평균 95이상 : A+
+평균 90이상 ~ 95미만 : A
+평균 85이상 ~ 90미만 : B+
+평균 80이상 ~ 85미만 : B
+평균 75이상 ~ 80미만 : C+
+평균 70이상 ~ 75미만 : C
+평균 65이상 ~ 70미만 : D+
+평균 60이상 ~ 65미만 : D
+평균 60미만 : F
+```
+클래스명 : Student
+
+void input(); //입력받는 메소드
+
+void print(int index); //출력하는 메소드
+
+```
+Enter a number of students > 3
+Enter score of korean, english, math of 1th student > 95 85 75
+Enter score of korean, english, math of 2th student > 90 80 70
+Enter score of korean, english, math of 3th student > 60 85 44
+================================================
+Registered 3 students list are as follows
+------------------------------------------------
+num     Korean  English Math    Total   Average Grade
+1       95      85      75      255     85.0    B+
+2       90      80      70      240     80.0    B
+3       60      85      44      189     63.0    D
+```
+
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+
+
